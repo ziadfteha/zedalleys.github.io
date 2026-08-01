@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact · Zed Alleys</title>
+<meta name="description" content="Get in touch with Ziad Fteha for product design, UX research, and design systems work — ziadfteha@gmail.com.">
+<meta property="og:title" content="Contact · Zed Alleys">
+<meta property="og:description" content="Get in touch with Ziad Fteha for product design, UX research, and design systems work.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/zed-logo.png">
+<link rel="icon" type="image/png" href="assets/images/zed-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,200..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/system.css">
+<link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand"><img src="assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark"><span class="brand-word">Alleys</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="portfolio.html" class="nav-link">Work</a>
+    <a href="blog.html" class="nav-link">Journal</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+</nav>
+
+<main class="contact-page">
+
+  <div class="contact-left">
+    <span class="eyebrow">04 / Get in touch</span>
+    <h1 class="display split-line">Let's <em class="accent">make</em> something.</h1>
+    <p class="lede reveal">I'm currently booking projects for Q3 2026. Whether it's a six‑month engagement, a one‑week sprint, or a coffee — the form on the right is the fastest way to reach me.</p>
+
+    <div class="contact-info">
+      <div class="contact-info-block">
+        <span class="label">Email</span>
+        <a href="mailto:ziadfteha@gmail.com" class="value is-link">ziadfteha@gmail.com</a>
+      </div>
+      <div class="contact-info-block">
+        <span class="label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener" class="value is-link">linkedin.com/in/ziadfteha ↗</a>
+      </div>
+      <div class="contact-info-block">
+        <span class="label">Response time</span>
+        <span class="value">~ 24 hours</span>
+      </div>
+      <div class="contact-info-block">
+        <span class="label">Based in</span>
+        <span class="value">Riyadh · GMT+3</span>
+      </div>
+    </div>
+  </div>
+
+  <form class="contact-form" id="form" onsubmit="return false;">
+    <div class="form-step-indicator">
+      <div class="step-dot is-active" data-step="0"></div>
+      <div class="step-dot" data-step="1"></div>
+      <div class="step-dot" data-step="2"></div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="form-screen" data-screen="0">
+      <div class="form-step-label">Step 01 / 03 · About you</div>
+
+      <div class="form-group">
+        <label class="form-label">Your name</label>
+        <input class="form-input" type="text" placeholder="Jane Doe" id="f-name">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Email address</label>
+        <input class="form-input" type="email" placeholder="jane@company.com" id="f-email">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Company / role <span style="color:var(--ink-muted);text-transform:none;letter-spacing:0;font-size:11px">(optional)</span></label>
+        <input class="form-input" type="text" placeholder="Acme Inc · Head of Product" id="f-company">
+      </div>
+
+      <div class="form-actions">
+        <span></span>
+        <button class="btn btn-primary magnetic" type="button" data-next>
+          <span>Continue</span><span>→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="form-screen" data-screen="1" style="display:none;">
+      <div class="form-step-label">Step 02 / 03 · The project</div>
+
+      <div class="form-group">
+        <label class="form-label">What kind of project?</label>
+        <div class="form-options" data-multi data-name="type">
+          <div class="form-option">Product Design</div>
+          <div class="form-option">Design System</div>
+          <div class="form-option">Mobile App</div>
+          <div class="form-option">Brand & Web</div>
+          <div class="form-option">UX Research</div>
+          <div class="form-option">Advisory · Coaching</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Budget range</label>
+        <div class="form-options" data-name="budget">
+          <div class="form-option">Under $10k</div>
+          <div class="form-option">$10k – $30k</div>
+          <div class="form-option">$30k – $80k</div>
+          <div class="form-option">$80k+</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Timeline</label>
+        <div class="form-options" data-name="timeline">
+          <div class="form-option">ASAP</div>
+          <div class="form-option">Within 1 month</div>
+          <div class="form-option">Within 3 months</div>
+          <div class="form-option">Just exploring</div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn magnetic" type="button" data-back>
+          <span>← Back</span>
+        </button>
+        <button class="btn btn-primary magnetic" type="button" data-next>
+          <span>Continue</span><span>→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="form-screen" data-screen="2" style="display:none;">
+      <div class="form-step-label">Step 03 / 03 · Tell me more</div>
+
+      <div class="form-group">
+        <label class="form-label">What are you working on?</label>
+        <textarea class="form-textarea" placeholder="A few sentences about the problem you're trying to solve, who it's for, and what success looks like." id="f-message"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">How did you find me?</label>
+        <div class="form-options" data-name="source">
+          <div class="form-option">Referral</div>
+          <div class="form-option">LinkedIn</div>
+          <div class="form-option">Read.cv / Dribbble</div>
+          <div class="form-option">Search · Other</div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button class="btn magnetic" type="button" data-back>
+          <span>← Back</span>
+        </button>
+        <button class="btn btn-primary magnetic" type="button" data-submit>
+          <span>Send message</span><span>↗</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="contact-success" data-screen="success" style="display:none;">
+      <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="38"/><path d="M24 40l12 12 22-22" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h3 class="display"><em>Message sent.</em></h3>
+      <p>Thanks — I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> on design systems.</p>
+      <a href="index.html" class="btn"><span>Back home</span><span>→</span></a>
+    </div>
+  </form>
+
+</main>
+
+<footer class="footer" style="margin-top: 60px;">
+  <div class="footer-meta">
+    <span>© 2026 Zed Alleys</span>
+    <span>Riyadh · Available Aug 2026</span>
+  </div>
+</footer>
+
+<script src="scripts/interactions.js"></script>
+<script>
+  let step = 0;
+  const screens = document.querySelectorAll('.form-screen');
+  const dots = document.querySelectorAll('.step-dot');
+
+  function go(n) {
+    step = n;
+    screens.forEach((s, i) => { s.style.display = i === n ? 'block' : 'none'; });
+    dots.forEach((d, i) => {
+      d.classList.toggle('is-active', i === n);
+      d.classList.toggle('is-done', i < n);
+    });
+    if (window.__bindMagnetic) window.__bindMagnetic();
+  }
+
+  document.querySelectorAll('[data-next]').forEach(b => b.addEventListener('click', () => go(step + 1)));
+  document.querySelectorAll('[data-back]').forEach(b => b.addEventListener('click', () => go(step - 1)));
+
+  // Multi/single selection
+  document.querySelectorAll('.form-options').forEach(group => {
+    const multi = group.hasAttribute('data-multi');
+    group.querySelectorAll('.form-option').forEach(opt => {
+      opt.addEventListener('click', () => {
+        if (multi) {
+          opt.classList.toggle('is-selected');
+        } else {
+          group.querySelectorAll('.form-option').forEach(o => o.classList.remove('is-selected'));
+          opt.classList.add('is-selected');
+        }
+      });
+    });
+  });
+
+  // Submit
+  document.querySelector('[data-submit]').addEventListener('click', () => {
+    document.querySelectorAll('.form-screen').forEach(s => s.style.display = 'none');
+    document.querySelector('[data-screen="success"]').style.display = 'block';
+    dots.forEach(d => { d.classList.add('is-done'); d.classList.remove('is-active'); });
+  });
+</script>
+
+</body>
+</html>

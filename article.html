@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The portfolio you don't put online · Zed Alleys</title>
+<meta name="description" content="An essay on the work that never makes it into a portfolio, by Ziad Fteha.">
+<meta property="og:title" content="The portfolio you don't put online · Zed Alleys">
+<meta property="og:description" content="An essay on the work that never makes it into a portfolio, by Ziad Fteha.">
+<meta property="og:type" content="article">
+<meta property="og:image" content="assets/images/zed-logo.png">
+<link rel="icon" type="image/png" href="assets/images/zed-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,200..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/system.css">
+<link rel="stylesheet" href="styles/blog.css">
+<style>
+  .progress-bar {
+    position: fixed;
+    top: 0; left: 0;
+    height: 2px;
+    background: var(--accent);
+    z-index: 200;
+    width: 0;
+    transition: width 0.1s linear;
+  }
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-brand"><img src="assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark"><span class="brand-word">Alleys</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="portfolio.html" class="nav-link">Work</a>
+    <a href="blog.html" class="nav-link">Journal</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="meta">
+    <a href="blog.html">← Journal</a>
+    <span class="pill">Career</span>
+    <span>April 28, 2026</span>
+    <span>· 8 min read</span>
+  </div>
+  <h1 class="split-line">The portfolio you don't put online.</h1>
+  <p class="lede">Why the most useful version of your design portfolio is the private one — the doc you write for yourself once a quarter, with everything you'd never show a recruiter.</p>
+</header>
+
+<div class="article-cover placeholder">
+  <div class="placeholder-label">Article cover · 16:5</div>
+</div>
+
+<article class="article-body">
+  <p>Every designer I know maintains a portfolio. Almost none of them maintain a <strong>private</strong> one — and that's the one that actually moves their career forward.</p>
+  <p>Public portfolios are pitches. They flatten. They smooth over the messy middle, the dead ends, the weeks you spent debugging your own assumptions. They have to, because hiring managers don't have time for the messy middle. But you do, and the messy middle is where your judgment lives.</p>
+
+  <h2>Three documents, not one.</h2>
+  <p>Once a quarter, I sit down with three blank docs and fill them in. The whole exercise takes a Saturday morning. Here's what goes in each.</p>
+
+  <h3>1. The Decisions doc.</h3>
+  <p>A bullet list of every non‑obvious decision you made in the last quarter, what you chose, and what you nearly chose instead. Don't write why — just the fork. The "why" is what you'll re‑examine in six months when you can see whether you were right.</p>
+  <blockquote>The point of the Decisions doc isn't to be right. It's to be calibrated.</blockquote>
+
+  <h3>2. The Killed Ideas file.</h3>
+  <p>A graveyard of work that didn't ship — flows you cut, components you deprecated, projects that died in stakeholder review. Most designers are taught to be ashamed of these. They shouldn't be. <strong>Killed ideas are the most honest record of your taste.</strong></p>
+  <p>The pattern that emerges over time is the most valuable signal you'll ever get about what kind of designer you actually are. Mine, for instance, shows I kill clever interactions and keep boring legible ones, almost without exception. That's not a critique of my work. That's a job description.</p>
+
+  <h3>3. The Embarrassment Archive.</h3>
+  <p>Screenshots of your old work, dated. No commentary. Just the receipts.</p>
+  <p>Look at it once a year. If you don't cringe at something from twelve months ago, you've stopped growing. If you cringe at everything, you've grown too fast and you're under‑confident.</p>
+
+  <h2>Why it works.</h2>
+  <ul>
+    <li>It separates <code>marketing</code> from <code>memory</code>. Public portfolios bend toward the audience. Private ones bend toward the truth.</li>
+    <li>It builds a longitudinal view of your taste. You can see your judgment evolve, in your own handwriting.</li>
+    <li>It's the single best prep doc for any interview, performance review, or promotion case you'll ever write — because it's already written.</li>
+  </ul>
+
+  <h2>One rule.</h2>
+  <p>Never share it. The moment you imagine an audience, the document starts lying to you. The whole point is that it's the version of your portfolio that doesn't have to perform.</p>
+
+  <p>That's the one that makes you better.</p>
+</article>
+
+<footer class="footer">
+  <div class="footer-big">
+    Liked this? <a href="blog.html"><em>More in the journal →</em></a>
+  </div>
+  <div class="footer-meta">
+    <span>© 2026 Zed Alleys</span>
+    <span><a href="blog.html">← All posts</a></span>
+  </div>
+</footer>
+
+<script src="scripts/interactions.js"></script>
+<script>
+  // Reading progress
+  const bar = document.getElementById('progress');
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + '%';
+  });
+</script>
+
+</body>
+</html>

@@ -28,4 +28,10 @@ export const categories: Category[] = [
     description: 'Designing for everyone, and designing so it stays consistent at scale.',
     subjectIds: ['accessibility-basics', 'design-systems'],
   },
+  {
+    id: 'ai-and-emerging-practice',
+    title: 'AI & Emerging Practice',
+    description: 'Designing the experience layer around models that are probabilistic, proactive, and sometimes wrong.',
+    subjectIds: ['ux-for-ai'],
+  },
 ];

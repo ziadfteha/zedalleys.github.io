@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
  * Site chrome for the Learning Hub, matching the Zed Alleys personal-site nav
  * (fixed, mix-blend, gains a blurred backdrop once the page scrolls under it).
  * The brand mark links back out to the main site home so the hub doesn't feel
- * like a disconnected app; the right-hand "Subjects" link is the way back to
- * the hub's own home.
+ * like a disconnected app; the "Subjects" link is the way back to the hub's
+ * own home.
  */
 const SITE_URL = 'https://zedalleys.com';
 
@@ -30,7 +30,6 @@ export function NavBar() {
       </a>
       <div className="hub-nav__links">
         <Link to="/" className="hub-nav__link">Subjects</Link>
-        <a href={SITE_URL} className="hub-nav__link">Zed Alleys ↗</a>
       </div>
     </nav>
   );

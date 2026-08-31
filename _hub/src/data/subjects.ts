@@ -1,5 +1,6 @@
 import type { Subject } from '../types';
 import { uxForAiSubject } from './subject-ux-for-ai';
+import { uxLawsSubject } from './subject-ux-laws';
 
 export const subjects: Subject[] = [
   {
@@ -3279,4 +3280,5 @@ export const subjects: Subject[] = [
     ],
   },
   uxForAiSubject,
+  uxLawsSubject,
 ];

@@ -20,7 +20,7 @@ export const categories: Category[] = [
     id: 'craft-and-perception',
     title: 'Craft & Perception',
     description: 'How interfaces communicate, and the perceptual rules behind why.',
-    subjectIds: ['visual-design-basics', 'interaction-design', 'gestalt-principles'],
+    subjectIds: ['visual-design-basics', 'interaction-design', 'gestalt-principles', 'ux-laws'],
   },
   {
     id: 'inclusive-and-systematic-design',

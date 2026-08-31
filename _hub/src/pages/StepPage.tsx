@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
 import { subjects } from '../data/subjects';
+import { ProgressBar } from '../components/ProgressBar';
 import { QuizBlock } from '../components/QuizBlock';
 import { QuizReview } from '../components/QuizReview';
 import { getAllSteps, getSubjectProgress, getSubjectStats, isStepComplete, markStepComplete } from '../lib/storage';
@@ -29,6 +30,7 @@ export function StepPage() {
   const previousStep = flatSteps[stepIndex - 1];
   const nextStep = flatSteps[stepIndex + 1];
   const nextStepUnlocked = alreadyComplete && !!nextStep;
+  const stats = getSubjectStats(subject);
 
   function handlePass() {
     markStepComplete(subject!.id, step.id);
@@ -51,6 +53,14 @@ export function StepPage() {
   return (
     <div className="page page--step">
       <Link to={`/subjects/${subject.id}`} className="back-link">← Back to path</Link>
+
+      <div className="step-progress">
+        <ProgressBar
+          percent={stats.percent}
+          color={subject.color}
+          label={`${stats.completed}/${stats.total} steps complete`}
+        />
+      </div>
 
       <p className="step-eyebrow" style={{ color: subject.color }}>
         Step {stepIndex + 1} of {flatSteps.length} · {subject.title}

@@ -522,6 +522,11 @@
    Step page
    ========================================================================== */
 
+.step-progress {
+  max-width: 360px;
+  margin: 16px 0 28px;
+}
+
 .step-eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;

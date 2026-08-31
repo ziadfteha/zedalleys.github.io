@@ -11,6 +11,8 @@ import {
   buildTwitterShareUrl,
   downloadCanvasAsPng,
   drawCertificate,
+  loadImage,
+  makeLocalCertificateId,
 } from '../lib/certificate';
 
 export function CertificatePage() {
@@ -24,16 +26,49 @@ export function CertificatePage() {
   const [certificateId, setCertificateId] = useState(existingProgress?.certificateId);
   const [issuing, setIssuing] = useState(false);
 
+  // Certificates issued without Supabase still need an id to print — mint a
+  // stable local one the first time a name is confirmed.
+  useEffect(() => {
+    if (!subject || !confirmedName || certificateId || isSupabaseConfigured) return;
+    const localId = makeLocalCertificateId();
+    saveCertificateId(subject.id, localId);
+    setCertificateId(localId);
+  }, [subject, confirmedName, certificateId]);
+
   useEffect(() => {
     if (!subject || !canvasRef.current) return;
-    drawCertificate({
-      canvas: canvasRef.current,
-      recipientName: confirmedName,
-      subjectTitle: subject.title,
-      dateLabel: new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }),
-      accentColor: subject.color,
-    });
-  }, [subject, confirmedName]);
+    const canvas = canvasRef.current;
+    let cancelled = false;
+
+    (async () => {
+      const logo = await loadImage(`${import.meta.env.BASE_URL}zed-logo.png`).catch(() => null);
+      try {
+        await Promise.all([
+          document.fonts.load("64px 'Alex Brush'"),
+          document.fonts.load('700 34px Fraunces'),
+        ]);
+      } catch {
+        /* fonts are best-effort; fall back to system faces */
+      }
+      if (cancelled) return;
+
+      const progress = getSubjectProgress(subject.id);
+      const issued = progress.completedAt ? new Date(progress.completedAt) : new Date();
+      drawCertificate({
+        canvas,
+        recipientName: confirmedName,
+        subjectTitle: subject.title,
+        dateLabel: issued.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' }),
+        accentColor: subject.color,
+        certificateId: progress.certificateId ?? certificateId ?? '—',
+        logo,
+      });
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [subject, confirmedName, certificateId]);
 
   if (!subject) return <Navigate to="/" replace />;
 
@@ -68,7 +103,12 @@ export function CertificatePage() {
     downloadCanvasAsPng(canvasRef.current, `${subject!.title.replace(/\s+/g, '-').toLowerCase()}-certificate.png`);
   }
 
-  const verifyUrl = certificateId ? `${window.location.origin}${window.location.pathname}#/verify/${certificateId}` : null;
+  // A verify link only makes sense when there's a backend behind it; a
+  // locally-minted id is a reference number, not a public record.
+  const verifyUrl =
+    isSupabaseConfigured && certificateId
+      ? `${window.location.origin}${window.location.pathname}#/verify/${certificateId}`
+      : null;
   const shareUrl = verifyUrl ?? window.location.href;
   const shareText = buildShareText(subject.title);
 
@@ -100,11 +140,15 @@ export function CertificatePage() {
             <canvas ref={canvasRef} className="certificate-canvas" />
           </div>
 
-          {certificateId && (
+          {verifyUrl && (
             <p className="certificate-verify-note">
               ✓ Verified — anyone can confirm this certificate at{' '}
               <Link to={`/verify/${certificateId}`}>{verifyUrl}</Link>
             </p>
+          )}
+
+          {certificateId && !verifyUrl && (
+            <p className="certificate-verify-note">Certificate ID: {certificateId}</p>
           )}
 
           <div className="certificate-actions">

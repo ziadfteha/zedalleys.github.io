@@ -243,25 +243,6 @@
   transform: rotate(-45deg);
 }
 
-/* Hover preview image */
-.featured-preview {
-  position: fixed;
-  pointer-events: none;
-  width: 320px;
-  height: 220px;
-  z-index: 50;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.9);
-  transition: opacity 0.3s var(--ease-out), transform 0.4s var(--ease-out);
-  border-radius: 4px;
-  overflow: hidden;
-  mix-blend-mode: normal;
-}
-.featured-preview.is-active {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
 /* ============ ABOUT TEASER ============ */
 
 .about-teaser {

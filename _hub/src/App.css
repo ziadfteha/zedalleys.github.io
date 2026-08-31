@@ -34,6 +34,13 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
+}
+.hub-nav__home,
+.hub-nav__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
   text-decoration: none;
 }
 .hub-nav__mark {
@@ -50,34 +57,10 @@
 }
 .hub-nav__tab {
   padding-top: 1px;
-  color: #fff;
 }
-
-.hub-nav__links {
-  display: flex;
-  gap: 4px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.hub-nav__link {
-  position: relative;
-  padding: 8px 14px;
-  color: #fff;
-  border-radius: var(--radius-pill);
-  text-decoration: none;
-}
-.hub-nav__link::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(255, 255, 255, 0);
-  transition: border-color 0.4s var(--ease-out);
-}
-.hub-nav__link:hover::before {
-  border-color: rgba(255, 255, 255, 0.5);
+.hub-nav__home:hover .hub-nav__word,
+.hub-nav__tab:hover {
+  color: var(--color-primary);
 }
 
 .hub-main {
@@ -892,21 +875,10 @@
   }
 }
 
-/* Site chrome — responsive (mirrors the personal site: nav links drop on mobile) */
+/* Site chrome — responsive */
 @media (max-width: 768px) {
   .hub-nav {
     padding: 14px 18px;
-  }
-  .hub-nav__divider,
-  .hub-nav__tab {
-    display: none;
-  }
-  .hub-nav__links {
-    gap: 0;
-    font-size: 11px;
-  }
-  .hub-nav__link {
-    padding: 6px 8px;
   }
   .hub-footer {
     padding: 56px 20px 30px;

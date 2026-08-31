@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zed Alleys — Senior Product Designer</title>
-<meta name="description" content="Ziad Fteha — Senior Product Designer based in Riyadh. Real case studies, design writing, and 8+ years shipping product across fintech, health and marketplace platforms.">
-<meta property="og:title" content="Zed Alleys — Senior Product Designer">
-<meta property="og:description" content="Ziad Fteha — Senior Product Designer based in Riyadh. Real case studies, design writing, and 8+ years shipping product.">
+<title>Zed Alleys — Product Designer</title>
+<meta name="description" content="Ziad Fteha — Expert Product Designer based in Riyadh. Real case studies, design writing, and 10+ years shipping product across fintech, health and marketplace platforms.">
+<meta property="og:title" content="Zed Alleys — Product Designer">
+<meta property="og:description" content="Ziad Fteha — Expert Product Designer based in Riyadh. Real case studies, design writing, and 10+ years shipping product.">
 <meta property="og:type" content="website">
 <meta property="og:image" content="assets/images/zed-logo.png">
 <link rel="icon" type="image/png" href="assets/images/zed-logo.png">
@@ -35,12 +35,12 @@
 <header class="hero">
   <div class="hero-meta reveal">
     <div class="hero-meta-item">
-      <span class="label">Designer</span>
+      <span class="label">Name</span>
       <span class="value">Ziad Fteha</span>
     </div>
     <div class="hero-meta-item">
       <span class="label">Role</span>
-      <span class="value">Senior Product Designer</span>
+      <span class="value">Expert Product Designer</span>
     </div>
     <div class="hero-meta-item">
       <span class="label">Based in</span>
@@ -77,7 +77,7 @@
       </defs>
       <g class="spin-rev">
         <text class="label-arc">
-          <textPath href="#labelArc" startOffset="0%">SENIOR · PRODUCT · DESIGNER · 2017 — 2026 · RIYADH ·</textPath>
+          <textPath href="#labelArc" startOffset="0%">EXPERT · PRODUCT · DESIGNER · 2016 — 2026 · RIYADH ·</textPath>
         </text>
         <text class="label-arc">
           <textPath href="#labelArcLower" startOffset="0%">SHIPPING · LISTENING · ITERATING · SHIPPING · LISTENING · ITERATING ·</textPath>
@@ -112,7 +112,7 @@
 
   <div class="hero-bottom">
     <p class="lede hero-bio reveal">
-      Eight years shipping interfaces for fintech, health and SaaS — from zero‑to‑one MVPs to enterprise design systems. I obsess over the moments between screens.
+      Ten years shipping interfaces for fintech, health and SaaS — from zero‑to‑one MVPs to enterprise design systems. I obsess over the moments between screens.
     </p>
     <div class="hero-cta reveal">
       <a href="portfolio.html" class="btn btn-primary magnetic"><span>See selected work</span><span>↗</span></a>
@@ -139,7 +139,7 @@
   </div>
 
   <ul class="featured-list" id="featured">
-    <li class="featured-item" data-href="case-study-fabrihub.html" data-preview="1">
+    <li class="featured-item" data-href="case-study-fabrihub.html">
       <span class="featured-num">01</span>
       <span class="featured-title">FabriHub</span>
       <div class="featured-tags">
@@ -149,7 +149,7 @@
       <span class="featured-year">2023</span>
       <span class="featured-arrow">→</span>
     </li>
-    <li class="featured-item" data-href="case-study-luqman.html" data-preview="2">
+    <li class="featured-item" data-href="case-study-luqman.html">
       <span class="featured-num">02</span>
       <span class="featured-title">Luqman — Dalael Centre</span>
       <div class="featured-tags">
@@ -160,21 +160,16 @@
       <span class="featured-arrow">→</span>
     </li>
   </ul>
-
-  <!-- Hover preview -->
-  <div class="featured-preview placeholder" id="hoverPreview">
-    <div class="placeholder-label">Project Preview</div>
-  </div>
 </section>
 
 <!-- STATS -->
 <section class="stats">
   <div class="stat reveal">
-    <div class="stat-num"><span class="accent">8</span>+</div>
+    <div class="stat-num"><span class="accent">10</span>+</div>
     <div class="stat-label">Years shipping product</div>
   </div>
   <div class="stat reveal">
-    <div class="stat-num">4</div>
+    <div class="stat-num">6</div>
     <div class="stat-label">Countries designed across</div>
   </div>
   <div class="stat reveal">
@@ -195,7 +190,7 @@
   <div class="about-teaser-content reveal">
     <span class="eyebrow">03 / About</span>
     <h2>Quiet design, loud impact.</h2>
-    <p>I'm Ziad — a Senior Product Designer with a track record of turning complex problems into intuitive, high‑impact products across healthcare, government and marketplace platforms.</p>
+    <p>I'm Ziad — an expert Product Designer with a track record of turning complex problems into intuitive, high‑impact products across healthcare, government and marketplace platforms.</p>
     <p>Currently designing in Riyadh, mentoring the next generation of designers on the side, and previously shipping work across Jeddah, Dubai and Stockholm.</p>
     <a href="about.html" class="btn magnetic" style="margin-top: 24px;"><span>Read full bio</span><span>→</span></a>
   </div>
@@ -292,24 +287,8 @@
     requestAnimationFrame(loop);
   })();
 
-  // Hover preview tracking
-  const preview = document.getElementById('hoverPreview');
-  const items = document.querySelectorAll('.featured-item');
-  const previewLabels = {
-    '1': 'FabriHub', '2': 'Luqman — Dalael Centre'
-  };
-  items.forEach(item => {
-    item.addEventListener('mouseenter', () => {
-      preview.classList.add('is-active');
-      preview.querySelector('.placeholder-label').textContent = previewLabels[item.dataset.preview];
-    });
-    item.addEventListener('mouseleave', () => {
-      preview.classList.remove('is-active');
-    });
-    item.addEventListener('mousemove', (e) => {
-      preview.style.left = e.clientX + 'px';
-      preview.style.top = e.clientY + 'px';
-    });
+  // Featured list — row click navigates to the case study
+  document.querySelectorAll('.featured-item').forEach(item => {
     item.addEventListener('click', () => {
       window.location.href = item.dataset.href;
     });

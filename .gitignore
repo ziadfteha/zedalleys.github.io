@@ -1,1 +1,8 @@
 .claude/
+
+# Learning Hub sub-app (_hub/) — build tooling, not deployed
+_hub/node_modules/
+_hub/dist/
+_hub/.env
+_hub/.env.*
+!_hub/.env.example

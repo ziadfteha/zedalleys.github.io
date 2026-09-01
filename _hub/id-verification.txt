@@ -1,0 +1,86 @@
+ID VERIFICATION — Certificate Verification Flow (not yet built)
+=================================================================
+
+STATUS: Code already exists for this, but it is NOT turned on. Only
+.env.example exists (VITE_SUPABASE_URL / VITE_SUPABASE_ANON_KEY both blank) —
+there is no .env.local. Without it, certificates still generate and
+download fine, they just have no verify link, and /#/verify/:id shows
+"verification unavailable."
+
+WHERE IT LIVES ON THE SITE
+---------------------------
+- Certificate page:  zedalleys.com/learning-hub/#/subjects/:subjectId/certificate
+- Public verify page: zedalleys.com/learning-hub/#/verify/:certificateId
+
+THE FLOW (once Supabase is configured)
+---------------------------------------
+1. Finish a subject. SubjectPathPage shows a "Get your certificate" CTA
+   once every step is complete. Leads to /subjects/:id/certificate.
+
+2. Name entry. CertificatePage shows a one-field form ("Your name").
+   Nothing is issued yet at this point.
+
+3. Submit -> issue. On submit (handleConfirmName in CertificatePage.tsx),
+   since Supabase is configured, it calls issueCertificate()
+   (lib/certificateRegistry.ts), which INSERTs into a `certificates` table
+   (subject_id, subject_title, recipient_name) and gets back a generated id.
+
+4. Canvas renders. Regardless of Supabase, drawCertificate()
+   (lib/certificate.ts) paints the actual certificate onto a <canvas> —
+   name, subject, issue date, signature "Ziad Fteha", certificate ID —
+   sized for a clean PNG download.
+
+5. Verify link appears. Since an id came back, the page shows:
+   "Verified — anyone can confirm this certificate at .../#/verify/<id>"
+   That link (not the bare certificate page) is what's used for the
+   Download action and the Share buttons.
+
+6. Share. LinkedIn/X/Facebook share buttons post the /verify/<id> URL, so
+   a recruiter clicking through from LinkedIn lands on the public verify
+   page, not the certificate-maker.
+
+7. Public verification. Anyone (no login) visiting /#/verify/<id>
+   triggers fetchCertificate(id), which calls a Supabase RPC
+   get_certificate(cert_id) — lookup-only by design (per RLS in
+   supabase/schema.sql: you can fetch one exact id, but you can't
+   list/enumerate all certificates). Three states render:
+   - found      -> green card: recipient, subject, issue date
+   - not-found  -> red "Certificate not found" (bad/mistyped id)
+   - unavailable -> shown right now, since Supabase isn't configured
+
+WITHOUT SUPABASE (today's actual state)
+-----------------------------------------
+Step 3 is skipped. makeLocalCertificateId() mints a client-side id
+(format: ZED-XXXXXXXXXXXX) just so something prints on the certificate.
+No verify link is shown; share buttons share the certificate page URL
+itself instead of a verify link.
+
+KNOWN GAP (documented in _hub/README.md)
+-------------------------------------------
+The Supabase `anon` key used for insert is public by design (no login
+system), so nothing stops someone from calling the API directly to insert
+a fake-looking row. Accepted as a v1 tradeoff; the real fix is adding
+accounts, or moving issuance behind a Supabase Edge Function that can
+rate-limit/validate server-side.
+
+TO TURN IT ON LATER
+----------------------
+1. Create a free project at supabase.com.
+2. In the Supabase dashboard: SQL Editor -> New query -> paste in
+   _hub/supabase/schema.sql -> run it. Creates the `certificates` table,
+   RLS policies, and the get_certificate lookup function.
+3. Project Settings -> API -> copy the Project URL and the anon public key.
+4. Copy _hub/.env.example to _hub/.env.local and paste those two values in.
+5. Restart `npm run dev` (Vite only reads .env* files at startup).
+6. To ship: cd _hub && npm run build (regenerates ../learning-hub/), then
+   commit _hub + learning-hub and push. GitHub Pages redeploys on push to
+   main.
+
+Relevant files:
+- _hub/src/pages/CertificatePage.tsx
+- _hub/src/pages/VerifyPage.tsx
+- _hub/src/lib/certificateRegistry.ts
+- _hub/src/lib/certificate.ts
+- _hub/src/lib/supabaseClient.ts
+- _hub/supabase/schema.sql
+- _hub/.env.example

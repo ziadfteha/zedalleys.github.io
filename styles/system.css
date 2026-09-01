@@ -406,6 +406,20 @@ img { max-width: 100%; display: block; }
   50% { transform: scaleX(0.3); transform-origin: left; }
 }
 
+/* ============ REDUCED MOTION ============ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .cursor { display: none; }
+}
+
 /* ============ PLACEHOLDER IMAGE ============ */
 
 .placeholder {

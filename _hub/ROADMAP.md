@@ -13,11 +13,12 @@
       download → share to LinkedIn / X / Facebook
 - [x] Progress persisted locally (`localStorage`), survives refresh
 - [x] Placeholder theme fully driven by CSS tokens, ready to rebrand
-- [x] Eight subjects with real content, each with 10 steps (5 levels × 2
+- [x] Ten subjects with real content, each with 10 steps (5 levels × 2
       steps, 2 quiz questions per step): "UX Design Fundamentals", "Visual
       Design Basics", "Interaction Design & Usability", "Accessibility
-      Basics", "Design Thinking", "Design Systems", "User Research", and
-      "Gestalt Principles"
+      Basics", "Design Thinking", "Design Systems", "User Research",
+      "Gestalt Principles", "UX Laws", and "UX for AI" (the latter two added
+      later, in their own `subject-ux-laws.ts` / `subject-ux-for-ai.ts` files)
 - [x] Learning Hub home page: hero, overall stats (steps/subjects/
       certificates), a "Continue learning" shortcut for in-progress
       subjects, a search box, and subjects grouped into categories

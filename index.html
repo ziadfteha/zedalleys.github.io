@@ -8,8 +8,17 @@
 <meta property="og:title" content="Zed Alleys — Product Designer">
 <meta property="og:description" content="Ziad Fteha — Expert Product Designer based in Riyadh. Real case studies, design writing, and 10+ years shipping product.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/images/zed-logo.png">
+<meta property="og:url" content="https://zedalleys.com/">
+<meta property="og:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Zed Alleys — Product Designer">
+<meta name="twitter:description" content="Ziad Fteha — Expert Product Designer based in Riyadh. Real case studies, design writing, and 10+ years shipping product.">
+<meta name="twitter:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<link rel="canonical" href="https://zedalleys.com/">
 <link rel="icon" type="image/png" href="assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="assets/images/zed-logo.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0a1416">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,200..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -40,7 +49,7 @@
     </div>
     <div class="hero-meta-item">
       <span class="label">Status</span>
-      <span class="status-pill"><span class="dot"></span> Available · Aug 2026</span>
+      <span class="status-pill"><span class="dot"></span> Available now</span>
     </div>
   </div>
 
@@ -251,6 +260,7 @@
     const path = document.getElementById('morphBlob');
     const fig = document.getElementById('heroFigure');
     if (!path || !fig) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
     const POINTS = 9;
     const BASE_R = 60;

@@ -26,15 +26,6 @@ export function CertificatePage() {
   const [certificateId, setCertificateId] = useState(existingProgress?.certificateId);
   const [issuing, setIssuing] = useState(false);
 
-  // Certificates issued without Supabase still need an id to print — mint a
-  // stable local one the first time a name is confirmed.
-  useEffect(() => {
-    if (!subject || !confirmedName || certificateId || isSupabaseConfigured) return;
-    const localId = makeLocalCertificateId();
-    saveCertificateId(subject.id, localId);
-    setCertificateId(localId);
-  }, [subject, confirmedName, certificateId]);
-
   useEffect(() => {
     if (!subject || !canvasRef.current) return;
     const canvas = canvasRef.current;
@@ -83,7 +74,9 @@ export function CertificatePage() {
     saveCertificateName(subject!.id, trimmed);
     setConfirmedName(trimmed);
 
-    if (isSupabaseConfigured && !certificateId) {
+    if (certificateId) return;
+
+    if (isSupabaseConfigured) {
       setIssuing(true);
       const id = await issueCertificate({
         subjectId: subject!.id,
@@ -95,6 +88,12 @@ export function CertificatePage() {
         saveCertificateId(subject!.id, id);
         setCertificateId(id);
       }
+    } else {
+      // Certificates issued without Supabase still need an id to print —
+      // mint a stable local one the first time a name is confirmed.
+      const localId = makeLocalCertificateId();
+      saveCertificateId(subject!.id, localId);
+      setCertificateId(localId);
     }
   }
 

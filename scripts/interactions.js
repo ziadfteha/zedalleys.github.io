@@ -1,37 +1,44 @@
 // Shared interaction primitives — cursor, magnetic, reveal
 
 (function() {
-  // Custom cursor
-  const cursor = document.createElement('div');
-  cursor.className = 'cursor';
-  document.body.appendChild(cursor);
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  let cx = mx, cy = my;
+  // Custom cursor — skipped entirely under reduced motion (it's a purely
+  // decorative dot that continuously chases the pointer via rAF).
+  if (!reduceMotion) {
+    const cursor = document.createElement('div');
+    cursor.className = 'cursor';
+    document.body.appendChild(cursor);
 
-  document.addEventListener('mousemove', (e) => {
-    mx = e.clientX; my = e.clientY;
-  });
+    let mx = window.innerWidth / 2, my = window.innerHeight / 2;
+    let cx = mx, cy = my;
 
-  function tick() {
-    cx += (mx - cx) * 0.18;
-    cy += (my - cy) * 0.18;
-    cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-    requestAnimationFrame(tick);
+    document.addEventListener('mousemove', (e) => {
+      mx = e.clientX; my = e.clientY;
+    });
+
+    function tick() {
+      cx += (mx - cx) * 0.18;
+      cy += (my - cy) * 0.18;
+      cursor.style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+      requestAnimationFrame(tick);
+    }
+    tick();
+
+    // Hover states
+    const hoverSel = 'a, button, .featured-item, .gallery-card, .blog-row, .next-project, .form-option, [data-cursor="hover"]';
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest(hoverSel)) cursor.classList.add('is-hovering');
+    });
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest(hoverSel)) cursor.classList.remove('is-hovering');
+    });
   }
-  tick();
 
-  // Hover states
-  const hoverSel = 'a, button, .featured-item, .gallery-card, .blog-row, .next-project, .form-option, [data-cursor="hover"]';
-  document.addEventListener('mouseover', (e) => {
-    if (e.target.closest(hoverSel)) cursor.classList.add('is-hovering');
-  });
-  document.addEventListener('mouseout', (e) => {
-    if (e.target.closest(hoverSel)) cursor.classList.remove('is-hovering');
-  });
-
-  // Magnetic effect
+  // Magnetic effect — skipped under reduced motion so buttons stay put
+  // instead of continuously tracking the pointer.
   function bindMagnetic() {
+    if (reduceMotion) return;
     document.querySelectorAll('.magnetic').forEach(el => {
       if (el.__magnetic) return;
       el.__magnetic = true;
@@ -81,7 +88,7 @@
     if (!href || href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || link.hasAttribute('target')) return;
     e.preventDefault();
     overlay.classList.add('is-active');
-    setTimeout(() => { window.location.href = href; }, 700);
+    setTimeout(() => { window.location.href = href; }, reduceMotion ? 0 : 700);
   });
 
   // Active nav link

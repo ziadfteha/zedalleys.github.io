@@ -1,0 +1,11 @@
+{
+  "name": "Zed Alleys — Ziad Fteha, Product Designer",
+  "short_name": "Zed Alleys",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a1416",
+  "theme_color": "#0a1416",
+  "icons": [
+    { "src": "/assets/images/zed-logo.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

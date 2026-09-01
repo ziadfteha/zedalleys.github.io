@@ -8,8 +8,17 @@
 <meta property="og:title" content="Contact · Zed Alleys">
 <meta property="og:description" content="Get in touch with Ziad Fteha for product design, UX research, and design systems work.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/images/zed-logo.png">
+<meta property="og:url" content="https://zedalleys.com/contact.html">
+<meta property="og:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact · Zed Alleys">
+<meta name="twitter:description" content="Get in touch with Ziad Fteha for product design, UX research, and design systems work.">
+<meta name="twitter:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<link rel="canonical" href="https://zedalleys.com/contact.html">
 <link rel="icon" type="image/png" href="assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="assets/images/zed-logo.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#0a1416">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,200..500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -35,7 +44,7 @@
   <div class="contact-left">
     <span class="eyebrow">04 / Get in touch</span>
     <h1 class="display split-line">Let's <em class="accent">make</em> something.</h1>
-    <p class="lede reveal">I'm currently booking projects for Q3 2026. Whether it's a six‑month engagement, a one‑week sprint, or a coffee — the form on the right is the fastest way to reach me.</p>
+    <p class="lede reveal">I'm currently available for new projects. Whether it's a six‑month engagement, a one‑week sprint, or a coffee — the form on the right is the fastest way to reach me.</p>
 
     <div class="contact-info">
       <div class="contact-info-block">
@@ -167,8 +176,8 @@
     <!-- SUCCESS -->
     <div class="contact-success" data-screen="success" style="display:none;">
       <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="38"/><path d="M24 40l12 12 22-22" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <h3 class="display"><em>Message sent.</em></h3>
-      <p>Thanks — I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> on design systems.</p>
+      <h3 class="display"><em>Almost there.</em></h3>
+      <p>Your email app just opened with everything filled in — hit send there and I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> on design systems.</p>
       <a href="index.html" class="btn"><span>Back home</span><span>→</span></a>
     </div>
   </form>
@@ -178,7 +187,7 @@
 <footer class="footer" style="margin-top: 60px;">
   <div class="footer-meta">
     <span>© 2026 Zed Alleys</span>
-    <span>Riyadh · Available Aug 2026</span>
+    <span>Riyadh · Available now</span>
   </div>
 </footer>
 
@@ -198,7 +207,17 @@
     if (window.__bindMagnetic) window.__bindMagnetic();
   }
 
-  document.querySelectorAll('[data-next]').forEach(b => b.addEventListener('click', () => go(step + 1)));
+  document.querySelectorAll('[data-next]').forEach(b => b.addEventListener('click', () => {
+    if (step === 0) {
+      const name = document.getElementById('f-name').value.trim();
+      const email = document.getElementById('f-email').value.trim();
+      if (!name || !email) {
+        alert('Please fill in your name and email before continuing.');
+        return;
+      }
+    }
+    go(step + 1);
+  }));
   document.querySelectorAll('[data-back]').forEach(b => b.addEventListener('click', () => go(step - 1)));
 
   // Multi/single selection
@@ -216,8 +235,43 @@
     });
   });
 
-  // Submit
+  function selectedOptions(name) {
+    return Array.from(document.querySelectorAll(`.form-options[data-name="${name}"] .is-selected`))
+      .map(o => o.textContent.trim());
+  }
+
+  // Submit — build a pre-filled mailto: so the message actually reaches an inbox
   document.querySelector('[data-submit]').addEventListener('click', () => {
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    if (!name || !email) {
+      alert('Please go back and fill in your name and email.');
+      return;
+    }
+    const company = document.getElementById('f-company').value.trim();
+    const message = document.getElementById('f-message').value.trim();
+    const type = selectedOptions('type').join(', ') || '—';
+    const budget = selectedOptions('budget').join(', ') || '—';
+    const timeline = selectedOptions('timeline').join(', ') || '—';
+    const source = selectedOptions('source').join(', ') || '—';
+
+    const subject = `New project inquiry from ${name}`;
+    const bodyLines = [
+      `Name: ${name}`,
+      `Email: ${email}`,
+      company ? `Company / role: ${company}` : null,
+      `Project type: ${type}`,
+      `Budget: ${budget}`,
+      `Timeline: ${timeline}`,
+      `Found via: ${source}`,
+      '',
+      'What they\'re working on:',
+      message || '—',
+    ].filter(Boolean);
+
+    const mailtoUrl = `mailto:ziadfteha@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+    window.location.href = mailtoUrl;
+
     document.querySelectorAll('.form-screen').forEach(s => s.style.display = 'none');
     document.querySelector('[data-screen="success"]').style.display = 'block';
     dots.forEach(d => { d.classList.add('is-done'); d.classList.remove('is-active'); });

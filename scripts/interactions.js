@@ -2,10 +2,13 @@
 
 (function() {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const noHover = window.matchMedia('(hover: none)').matches;
 
   // Custom cursor — skipped entirely under reduced motion (it's a purely
-  // decorative dot that continuously chases the pointer via rAF).
-  if (!reduceMotion) {
+  // decorative dot that continuously chases the pointer via rAF) and on
+  // touch devices (CSS already hides it there, so don't run the rAF loop
+  // and pointer listeners for nothing).
+  if (!reduceMotion && !noHover) {
     const cursor = document.createElement('div');
     cursor.className = 'cursor';
     document.body.appendChild(cursor);
@@ -119,7 +122,13 @@
       navToggle.setAttribute('aria-expanded', String(isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
-    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
+    const navLinksPanel = document.getElementById('navLinks');
+    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => {
+      // Close instantly (no slide-out) — the page is about to navigate away,
+      // so an animated close just flashes the tapped label before the transition overlay catches up.
+      if (navLinksPanel) navLinksPanel.style.transition = 'none';
+      closeMenu();
+    }));
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
   }
 

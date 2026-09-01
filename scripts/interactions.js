@@ -106,5 +106,22 @@
     window.addEventListener('scroll', setScrolled, { passive: true });
   }
 
+  // Mobile nav toggle — opens/closes the slide-in nav-links panel
+  const navToggle = document.getElementById('navToggle');
+  if (nav && navToggle) {
+    const closeMenu = () => {
+      nav.classList.remove('is-menu-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    };
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-menu-open');
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+  }
+
   window.__bindMagnetic = bindMagnetic;
 })();

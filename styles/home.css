@@ -89,6 +89,12 @@
     margin: 40px auto;
     width: 260px; height: 260px;
   }
+  /* On mobile the stacked hero content grows taller than 100vh, so
+     .scroll-hint's `position: absolute; bottom: 40px` (pinned to the
+     .hero box's own bottom edge, not the viewport) lands on top of the
+     CTA buttons instead of below the fold — hide the decorative hint. */
+  .scroll-hint { display: none; }
+  .hero-cta { flex-wrap: wrap; }
 }
 
 .hero-meta {

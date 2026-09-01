@@ -173,6 +173,28 @@ img { max-width: 100%; display: block; }
 .nav-link:hover::before { border-color: rgba(255,255,255,0.5); }
 .nav-link.is-active::before { border-color: rgba(255,255,255,0.9); }
 
+/* ============ NAV TOGGLE (mobile) ============ */
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  flex-shrink: 0;
+  z-index: 101;
+}
+.nav-toggle-bar {
+  display: block;
+  width: 20px; height: 1.5px;
+  background: #fff;
+  transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
+}
+.nav.is-menu-open .nav-toggle-bar:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav.is-menu-open .nav-toggle-bar:nth-child(2) { opacity: 0; }
+.nav.is-menu-open .nav-toggle-bar:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
 /* ============ CURSOR ============ */
 
 .cursor {
@@ -458,5 +480,39 @@ img { max-width: 100%; display: block; }
   .container, .container-tight { padding: 0 20px; }
   .footer { padding: 60px 20px 30px; }
   .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-  .nav-links { display: none; }
+
+  .nav-toggle { display: flex; }
+  .nav.is-menu-open { mix-blend-mode: normal; }
+
+  .nav-links {
+    position: fixed;
+    top: 0; right: 0;
+    height: 100vh;
+    width: min(78vw, 320px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    padding: 100px 28px 40px;
+    background: rgba(10, 20, 22, 0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-left: 1px solid var(--line);
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.4s var(--ease-out), visibility 0s 0.4s;
+  }
+  .nav.is-menu-open .nav-links {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.4s var(--ease-out);
+  }
+  .nav-links .nav-link {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .nav-links .nav-link::before { border-radius: 8px; }
+  .nav-links .nav-link:hover::before,
+  .nav-links .nav-link.is-active::before { border-color: var(--line-strong); background: var(--bg-soft); }
 }

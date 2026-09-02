@@ -416,7 +416,7 @@ img {
   text-transform: uppercase;
   color: var(--ink-dim);
 }
-.footer h4 {
+.footer h3 {
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.15em;

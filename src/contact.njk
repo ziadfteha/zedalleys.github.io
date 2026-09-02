@@ -1,0 +1,180 @@
+---
+permalink: contact.html
+navKey: contact
+pageStyle: contact
+title: Contact · Zed Alleys
+description: Start a project with Ziad Fteha — Product Designer in Riyadh. Available for engagements, sprints and advisory. Response within ~24 hours.
+socialDescription: Start a project with Ziad Fteha — Product Designer in Riyadh.
+ogImage: /assets/og/contact.png
+extraScripts: |
+  <script src="/scripts/contact-form.js" defer></script>
+jsonld:
+  "@context": https://schema.org
+  "@type": ContactPage
+  name: Contact · Zed Alleys
+  url: https://zedalleys.com/contact.html
+---
+<main class="contact-page">
+
+  <div class="contact-left">
+    <span class="eyebrow">04 / Get in touch</span>
+    <h1 class="display split-line">Let's <em class="accent">make</em> something.</h1>
+    <p class="lede reveal">I'm currently available for new projects. Whether it's a six‑month engagement, a one‑week sprint, or a coffee — the form on the right is the fastest way to reach me.</p>
+
+    <div class="contact-info">
+      <div class="contact-info-block">
+        <span class="label">Email</span>
+        <a href="mailto:ziadfteha@gmail.com" class="value is-link">ziadfteha@gmail.com</a>
+      </div>
+      <div class="contact-info-block">
+        <span class="label">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener" class="value is-link">linkedin.com/in/ziadfteha ↗</a>
+      </div>
+      <div class="contact-info-block">
+        <span class="label">Response time</span>
+        <span class="value">~ 24 hours</span>
+      </div>
+      <div class="contact-info-block">
+        <span class="label">Based in</span>
+        <span class="value">Riyadh · GMT+3</span>
+      </div>
+    </div>
+
+    <noscript>
+      <p class="lede" style="margin-top:32px">
+        The step‑by‑step form needs JavaScript. Email me directly at
+        <a href="mailto:ziadfteha@gmail.com" style="color:var(--accent);text-decoration:underline">ziadfteha@gmail.com</a>
+        with a few lines about your project, timeline and budget.
+      </p>
+    </noscript>
+  </div>
+
+  <form class="contact-form" id="form" action="https://formspree.io/f/xeaqgzwg" method="POST">
+    <!-- Honeypot — real people leave this blank; bots fill it and Formspree drops the message. -->
+    <input type="text" name="_gotcha" id="f-gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+
+    <div class="form-step-indicator">
+      <div class="step-dot is-active" data-step="0"></div>
+      <div class="step-dot" data-step="1"></div>
+      <div class="step-dot" data-step="2"></div>
+    </div>
+
+    <!-- STEP 1 -->
+    <div class="form-screen" data-screen="0">
+      <div class="form-step-label" tabindex="-1">Step 01 / 03 · About you</div>
+
+      <div class="form-group">
+        <label class="form-label" for="f-name">Your name</label>
+        <input class="form-input" type="text" placeholder="Jane Doe" id="f-name" name="name" autocomplete="name" aria-describedby="f-name-error">
+        <span class="form-error" id="f-name-error" role="alert" hidden>Please enter your name.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="f-email">Email address</label>
+        <input class="form-input" type="email" placeholder="jane@company.com" id="f-email" name="email" autocomplete="email" aria-describedby="f-email-error">
+        <span class="form-error" id="f-email-error" role="alert" hidden>Please enter your email.</span>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="f-company">Company / role <span style="color:var(--ink-dim);text-transform:none;letter-spacing:0;font-size:11px">(optional)</span></label>
+        <input class="form-input" type="text" placeholder="Acme Inc · Head of Product" id="f-company" name="company" autocomplete="organization">
+      </div>
+
+      <div class="form-actions">
+        <span></span>
+        <button class="btn btn-primary magnetic" type="button" data-next>
+          <span>Continue</span><span>→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="form-screen" data-screen="1" style="display:none;">
+      <div class="form-step-label" tabindex="-1">Step 02 / 03 · The project</div>
+
+      <fieldset class="form-group">
+        <legend class="form-label">What kind of project?</legend>
+        <div class="form-options" data-name="type">
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Product Design">Product Design</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Design System">Design System</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Mobile App">Mobile App</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Brand & Web">Brand & Web</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="UX Research">UX Research</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Advisory · Coaching">Advisory · Coaching</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend class="form-label">Budget range</legend>
+        <div class="form-options" data-name="budget">
+          <label class="form-option"><input class="form-option-input" type="radio" name="budget" value="Under $10k">Under $10k</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="budget" value="$10k – $30k">$10k – $30k</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="budget" value="$30k – $80k">$30k – $80k</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="budget" value="$80k+">$80k+</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-group">
+        <legend class="form-label">Timeline</legend>
+        <div class="form-options" data-name="timeline">
+          <label class="form-option"><input class="form-option-input" type="radio" name="timeline" value="ASAP">ASAP</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="timeline" value="Within 1 month">Within 1 month</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="timeline" value="Within 3 months">Within 3 months</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="timeline" value="Just exploring">Just exploring</label>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button class="btn magnetic" type="button" data-back>
+          <span>← Back</span>
+        </button>
+        <button class="btn btn-primary magnetic" type="button" data-next>
+          <span>Continue</span><span>→</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="form-screen" data-screen="2" style="display:none;">
+      <div class="form-step-label" tabindex="-1">Step 03 / 03 · Tell me more</div>
+
+      <div class="form-group">
+        <label class="form-label" for="f-message">What are you working on?</label>
+        <textarea class="form-textarea" placeholder="A few sentences about the problem you're trying to solve, who it's for, and what success looks like." id="f-message" name="message"></textarea>
+      </div>
+
+      <fieldset class="form-group">
+        <legend class="form-label">How did you find me?</legend>
+        <div class="form-options" data-name="source">
+          <label class="form-option"><input class="form-option-input" type="radio" name="source" value="Referral">Referral</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="source" value="LinkedIn">LinkedIn</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="source" value="Read.cv / Dribbble">Read.cv / Dribbble</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="source" value="Search · Other">Search · Other</label>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button class="btn magnetic" type="button" data-back>
+          <span>← Back</span>
+        </button>
+        <button class="btn btn-primary magnetic" type="submit" data-submit>
+          <span>Send message</span><span>↗</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SUCCESS -->
+    <div class="contact-success" data-screen="success" style="display:none;">
+      <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="38"/><path d="M24 40l12 12 22-22" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h2 class="display" tabindex="-1"><em>Almost there.</em></h2>
+      <p id="success-message-sent" hidden>Thanks — your message is in. I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="/blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> from the journal.</p>
+      <p id="success-message-mailto" hidden>Your email app should have just opened with everything filled in — hit send there and I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="/blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> from the journal.</p>
+      <a href="/" class="btn"><span>Back home</span><span>→</span></a>
+
+      <div class="contact-fallback" id="contactFallback" hidden>
+        <p class="contact-fallback-hint">Nothing happened? Not having an email app configured on this device isn't unusual — copy the message below and send it from any inbox to <a href="mailto:ziadfteha@gmail.com">ziadfteha@gmail.com</a>.</p>
+        <textarea class="form-textarea contact-fallback-text" id="fallback-message" readonly rows="7"></textarea>
+        <button class="btn magnetic" type="button" id="copyFallback"><span aria-live="polite">Copy message</span></button>
+      </div>
+    </div>
+  </form>
+
+</main>

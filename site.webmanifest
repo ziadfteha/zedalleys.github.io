@@ -6,6 +6,13 @@
   "background_color": "#0a1416",
   "theme_color": "#0a1416",
   "icons": [
-    { "src": "/assets/images/zed-logo.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "/assets/images/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/images/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    {
+      "src": "/assets/images/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

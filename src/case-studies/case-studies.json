@@ -1,0 +1,9 @@
+{
+  "layout": "base.njk",
+  "tags": ["caseStudy"],
+  "navKey": "portfolio",
+  "pageStyle": "case-study",
+  "ogType": "article",
+  "permalink": "case-study-{{ page.fileSlug }}.html",
+  "extraScripts": "<script src=\"/scripts/case-study.js\" defer></script>"
+}

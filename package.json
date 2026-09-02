@@ -1,14 +1,23 @@
 {
   "name": "zedalleys-website",
   "private": true,
-  "description": "Zed Alleys — personal portfolio site (static HTML/CSS/JS, deployed via GitHub Pages)",
+  "description": "Zed Alleys — personal portfolio site (Eleventy → static HTML/CSS/JS, deployed via GitHub Pages)",
   "scripts": {
+    "assets": "node scripts/build-assets.mjs",
+    "build": "npm run assets && eleventy",
+    "watch": "eleventy --serve",
     "lint": "eslint scripts/*.js",
-    "format": "prettier --write \"**/*.{css,js}\"",
-    "format:check": "prettier --check \"**/*.{css,js}\""
+    "format": "prettier --write \"**/*.{css,js,mjs}\"",
+    "format:check": "prettier --check \"**/*.{css,js,mjs}\"",
+    "validate": "html-validate \"*.html\" \"journal/**/*.html\""
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
     "eslint": "^9.15.0",
-    "prettier": "^3.3.3"
+    "html-validate": "^9.7.1",
+    "luxon": "^3.7.2",
+    "prettier": "^3.3.3",
+    "sharp": "^0.33.5"
   }
 }

@@ -4,36 +4,53 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Journal · Zed Alleys</title>
-<meta name="description" content="Design writing and essays by Ziad Fteha, Product Designer.">
+<meta name="description" content="Design writing and essays by Ziad Fteha — notes on craft, career and the moments where products earn or lose trust.">
 <meta property="og:title" content="Journal · Zed Alleys">
 <meta property="og:description" content="Design writing and essays by Ziad Fteha, Product Designer.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zedalleys.com/blog.html">
-<meta property="og:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta property="og:image" content="https://zedalleys.com/assets/og/blog.png">
+<meta property="og:site_name" content="Zed Alleys">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Journal · Zed Alleys">
 <meta name="twitter:description" content="Design writing and essays by Ziad Fteha, Product Designer.">
-<meta name="twitter:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta name="twitter:image" content="https://zedalleys.com/assets/og/blog.png">
 <link rel="canonical" href="https://zedalleys.com/blog.html">
-<link rel="icon" type="image/png" href="assets/images/zed-logo.png">
-<link rel="apple-touch-icon" href="assets/images/zed-logo.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0a1416">
-<link rel="preload" href="assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles/system.css">
-<link rel="stylesheet" href="styles/blog.css">
+<meta name="view-transition" content="same-origin">
+<link rel="preload" href="/assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles/system.css">
+<link rel="stylesheet" href="/styles/blog.css">
+<link rel="alternate" type="application/rss+xml" title="Zed Alleys — Journal" href="/feed.xml">
 <script defer data-domain="zedalleys.com" src="https://plausible.io/js/script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Zed Alleys — Journal",
+  "url": "https://zedalleys.com/blog.html",
+  "author": {
+    "@type": "Person",
+    "name": "Ziad Fteha"
+  }
+}
+</script>
 </head>
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-brand"><img src="assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
+  <a href="/" class="nav-brand"><img src="/assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
   <div class="nav-links" id="navLinks">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="portfolio.html" class="nav-link">Work</a>
-    <a href="blog.html" class="nav-link">Journal</a>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/portfolio.html" class="nav-link">Work</a>
+    <a href="/blog.html" class="nav-link is-active" aria-current="page">Journal</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
     <a href="/learning-hub/" class="nav-link">Learning Hub</a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -43,6 +60,7 @@
   </button>
 </nav>
 
+
 <main>
 
 <header class="blog-hero">
@@ -50,29 +68,60 @@
   <h1 class="display split-line"><em>Writing</em> about design.</h1>
   <p class="lede reveal">Half‑formed thoughts on craft, career and the moments where products either earn trust or quietly lose it.</p>
 </header>
-
-<section class="blog-coming-soon reveal">
-  <div class="placeholder">
-    <div class="placeholder-label">Coming soon</div>
+<a class="blog-featured reveal" href="/journal/the-portfolio-you-dont-put-online/">
+  <div class="image">
+    <div class="placeholder" style="height:100%"><div class="placeholder-label">Career</div></div>
   </div>
-  <h2 class="display">First essay <em class="accent">coming soon.</em></h2>
-  <p class="lede">The journal is on its way — check back soon, or get in touch if there's something specific you'd like me to write about.</p>
-  <a href="contact.html" class="btn btn-primary magnetic" style="margin-top: 8px;"><span>Get in touch</span><span>→</span></a>
-</section>
+  <div class="content">
+    <div class="meta"><span class="pill">Career</span>
+      <span>April 28, 2026</span>
+      <span>· 2 min read</span>
+    </div>
+    <h2>The portfolio you don&#39;t put online.</h2>
+    <p>Why the most useful version of your design portfolio is the private one — the doc you write for yourself once a quarter, with everything you&#39;d never show a recruiter.</p>
+  </div>
+</a>
 
 </main>
 
+
 <footer class="footer">
   <div class="footer-big">
-    Have a project? <a href="contact.html"><em>Let's talk →</em></a>
+    Have a project? <a href="/contact.html"><em>Let's talk →</em></a>
+  </div>
+  <div class="footer-grid">
+    <div>
+      <h3>Sitemap</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Work</a></li>
+        <li><a href="/blog.html">Journal</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/learning-hub/">Learning Hub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Elsewhere</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="/feed.xml">RSS feed ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Get in touch</h3>
+      <ul>
+        <li><a href="mailto:ziadfteha@gmail.com">ziadfteha@gmail.com</a></li>
+      </ul>
+    </div>
   </div>
   <div class="footer-meta">
-    <span>© 2026 Zed Alleys</span>
-    <span>First essay coming soon</span>
+    <span>© 2026 Zed Alleys · All rights reserved</span>
+    <span>Designed &amp; built with care · Riyadh</span>
   </div>
 </footer>
 
-<script src="scripts/interactions.js"></script>
 
+<script src="/scripts/interactions.js"></script>
 </body>
 </html>

@@ -9,32 +9,69 @@
 <meta property="og:description" content="Ziad Fteha — Expert Product Designer based in Riyadh. Real case studies, design writing, and 10+ years shipping product.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zedalleys.com/">
-<meta property="og:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta property="og:image" content="https://zedalleys.com/assets/og/default.png">
+<meta property="og:site_name" content="Zed Alleys">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Zed Alleys — Product Designer">
 <meta name="twitter:description" content="Ziad Fteha — Expert Product Designer based in Riyadh. Real case studies, design writing, and 10+ years shipping product.">
-<meta name="twitter:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta name="twitter:image" content="https://zedalleys.com/assets/og/default.png">
 <link rel="canonical" href="https://zedalleys.com/">
-<link rel="icon" type="image/png" href="assets/images/zed-logo.png">
-<link rel="apple-touch-icon" href="assets/images/zed-logo.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0a1416">
-<link rel="preload" href="assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles/system.css">
-<link rel="stylesheet" href="styles/home.css">
+<meta name="view-transition" content="same-origin">
+<link rel="preload" href="/assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles/system.css">
+<link rel="stylesheet" href="/styles/home.css">
+<link rel="alternate" type="application/rss+xml" title="Zed Alleys — Journal" href="/feed.xml">
 <script defer data-domain="zedalleys.com" src="https://plausible.io/js/script.js"></script>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Zed Alleys",
+    "url": "https://zedalleys.com/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ziad Fteha",
+    "alternateName": "Zed Alleys",
+    "jobTitle": "Product Designer",
+    "url": "https://zedalleys.com/",
+    "image": "https://zedalleys.com/assets/og/default.png",
+    "sameAs": [
+      "https://www.linkedin.com/in/ziadfteha/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Riyadh",
+      "addressCountry": "SA"
+    },
+    "knowsAbout": [
+      "Product Design",
+      "Design Systems",
+      "UX Research",
+      "Prototyping"
+    ]
+  }
+]
+</script>
 </head>
-<body>
+<body class="page-home">
 
-<!-- NAV -->
 <nav class="nav">
-  <a href="index.html" class="nav-brand"><img src="assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
+  <a href="/" class="nav-brand"><img src="/assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
   <div class="nav-links" id="navLinks">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="portfolio.html" class="nav-link">Work</a>
-    <a href="blog.html" class="nav-link">Journal</a>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="/" class="nav-link is-active" aria-current="page">Home</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/portfolio.html" class="nav-link">Work</a>
+    <a href="/blog.html" class="nav-link">Journal</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
     <a href="/learning-hub/" class="nav-link">Learning Hub</a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -43,6 +80,7 @@
     <span class="nav-toggle-bar"></span>
   </button>
 </nav>
+
 
 <main>
 
@@ -62,14 +100,11 @@
   <!-- Animated figure -->
   <div class="hero-figure" id="heroFigure" aria-hidden="true">
     <svg viewBox="-200 -200 400 400">
-      <!-- Soft accent blob -->
       <circle class="blob" cx="0" cy="0" r="80"></circle>
 
-      <!-- Static guide cross -->
       <line class="grid-cross" x1="-180" y1="0" x2="180" y2="0"></line>
       <line class="grid-cross" x1="0" y1="-180" x2="0" y2="180"></line>
 
-      <!-- Concentric rings -->
       <g id="ringGroup">
         <circle class="ring spin-slow" cx="0" cy="0" r="180"></circle>
         <circle class="ring spin-rev"  cx="0" cy="0" r="148"></circle>
@@ -77,7 +112,6 @@
         <circle class="ring spin-slow" cx="0" cy="0" r="84"></circle>
       </g>
 
-      <!-- Curved label following outermost ring -->
       <defs>
         <path id="labelArc" d="M -178 0 A 178 178 0 0 1 178 0"></path>
         <path id="labelArcLower" d="M 178 0 A 178 178 0 0 1 -178 0"></path>
@@ -91,7 +125,6 @@
         </text>
       </g>
 
-      <!-- Orbiting dots -->
       <g class="spin-fast">
         <circle class="orbit-dot" cx="116" cy="0" r="3.5"></circle>
       </g>
@@ -102,10 +135,8 @@
         <circle class="orbit-dot" cx="0" cy="-180" r="2"></circle>
       </g>
 
-      <!-- Generative blob (animates via JS) -->
       <path id="morphBlob" d="" fill="none" stroke="rgba(244,241,234,0.6)" stroke-width="1"></path>
 
-      <!-- Center mark -->
       <text class="center-mark" text-anchor="middle" y="4">+</text>
     </svg>
   </div>
@@ -122,8 +153,8 @@
       Ten years shipping interfaces for fintech, health and SaaS — from zero‑to‑one MVPs to enterprise design systems. I obsess over the moments between screens.
     </p>
     <div class="hero-cta reveal">
-      <a href="portfolio.html" class="btn btn-primary magnetic"><span>See selected work</span><span>↗</span></a>
-      <a href="contact.html" class="btn magnetic"><span>Start a project</span></a>
+      <a href="/portfolio.html" class="btn btn-primary magnetic"><span>See selected work</span><span>↗</span></a>
+      <a href="/contact.html" class="btn magnetic"><span>Start a project</span></a>
     </div>
   </div>
 
@@ -147,7 +178,7 @@
 
   <ul class="featured-list" id="featured">
     <li>
-      <a class="featured-item" href="case-study-fabrihub.html">
+      <a class="featured-item" href="/case-study-fabrihub.html">
         <span class="featured-num">01</span>
         <span class="featured-title">FabriHub</span>
         <div class="featured-tags">
@@ -159,7 +190,7 @@
       </a>
     </li>
     <li>
-      <a class="featured-item" href="case-study-luqman.html">
+      <a class="featured-item" href="/case-study-luqman.html">
         <span class="featured-num">02</span>
         <span class="featured-title">Luqman — Dalael Centre</span>
         <div class="featured-tags">
@@ -171,7 +202,7 @@
       </a>
     </li>
     <li>
-      <a class="featured-item" href="case-study-ilearn.html">
+      <a class="featured-item" href="/case-study-ilearn.html">
         <span class="featured-num">03</span>
         <span class="featured-title">i‑Learn</span>
         <div class="featured-tags">
@@ -183,7 +214,7 @@
       </a>
     </li>
     <li>
-      <a class="featured-item" href="case-study-reportage.html">
+      <a class="featured-item" href="/case-study-reportage.html">
         <span class="featured-num">04</span>
         <span class="featured-title">Reportage Properties</span>
         <div class="featured-tags">
@@ -219,6 +250,11 @@
 
 <!-- ABOUT TEASER -->
 <section class="about-teaser">
+  <!-- TODO(zed): drop a real portrait in at /assets/images/portrait.jpg
+       (approx 900×1100, plus a .webp sibling) and swap the placeholder div
+       below for:
+       <img class="photo" src="/assets/images/portrait.jpg" width="900" height="1100"
+            alt="Ziad Fteha" loading="lazy" decoding="async"> -->
   <div class="placeholder photo">
     <div class="placeholder-label">Portrait — drop in</div>
   </div>
@@ -227,26 +263,26 @@
     <h2>Quiet design, loud impact.</h2>
     <p>I'm Ziad — an expert Product Designer with a track record of turning complex problems into intuitive, high‑impact products across healthcare, government and marketplace platforms.</p>
     <p>Currently designing in Riyadh, mentoring the next generation of designers on the side, and previously shipping work across Jeddah, Dubai and Stockholm.</p>
-    <a href="about.html" class="btn magnetic" style="margin-top: 24px;"><span>Read full bio</span><span>→</span></a>
+    <a href="/about.html" class="btn magnetic" style="margin-top: 24px;"><span>Read full bio</span><span>→</span></a>
   </div>
 </section>
 
-<!-- FOOTER -->
 </main>
+
 
 <footer class="footer">
   <div class="footer-big">
-    Have a project? <a href="contact.html"><em>Let's talk →</em></a>
+    Have a project? <a href="/contact.html"><em>Let's talk →</em></a>
   </div>
   <div class="footer-grid">
     <div>
       <h3>Sitemap</h3>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Work</a></li>
-        <li><a href="blog.html">Journal</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Work</a></li>
+        <li><a href="/blog.html">Journal</a></li>
+        <li><a href="/contact.html">Contact</a></li>
         <li><a href="/learning-hub/">Learning Hub</a></li>
       </ul>
     </div>
@@ -254,6 +290,7 @@
       <h3>Elsewhere</h3>
       <ul>
         <li><a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="/feed.xml">RSS feed ↗</a></li>
       </ul>
     </div>
     <div>
@@ -265,66 +302,13 @@
   </div>
   <div class="footer-meta">
     <span>© 2026 Zed Alleys · All rights reserved</span>
-    <span>Designed & built with care · Riyadh</span>
+    <span>Designed &amp; built with care · Riyadh</span>
   </div>
 </footer>
 
-<script src="scripts/interactions.js"></script>
-<script>
-  // ==== Animated morph blob in hero ====
-  (function() {
-    const path = document.getElementById('morphBlob');
-    const fig = document.getElementById('heroFigure');
-    if (!path || !fig) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-    const POINTS = 9;
-    const BASE_R = 60;
-    const seeds = Array.from({length: POINTS}, () => Math.random() * 1000);
-    let mx = 0, my = 0, tx = 0, ty = 0;
-
-    fig.parentElement.addEventListener('mousemove', (e) => {
-      const r = fig.getBoundingClientRect();
-      const cx = r.left + r.width / 2;
-      const cy = r.top + r.height / 2;
-      tx = (e.clientX - cx) / r.width * 30;
-      ty = (e.clientY - cy) / r.height * 30;
-    });
-
-    function buildPath(t) {
-      mx += (tx - mx) * 0.06;
-      my += (ty - my) * 0.06;
-      const pts = [];
-      for (let i = 0; i < POINTS; i++) {
-        const a = (i / POINTS) * Math.PI * 2;
-        const noise =
-          Math.sin(t * 0.0008 + seeds[i]) * 14 +
-          Math.cos(t * 0.0013 + seeds[i] * 1.3) * 10;
-        const r = BASE_R + noise;
-        pts.push([Math.cos(a) * r + mx, Math.sin(a) * r + my]);
-      }
-      // Smooth closed catmull-rom -> bezier
-      let d = '';
-      for (let i = 0; i < POINTS; i++) {
-        const p0 = pts[(i - 1 + POINTS) % POINTS];
-        const p1 = pts[i];
-        const p2 = pts[(i + 1) % POINTS];
-        const p3 = pts[(i + 2) % POINTS];
-        if (i === 0) d += `M ${p1[0].toFixed(2)} ${p1[1].toFixed(2)} `;
-        const c1x = p1[0] + (p2[0] - p0[0]) / 6;
-        const c1y = p1[1] + (p2[1] - p0[1]) / 6;
-        const c2x = p2[0] - (p3[0] - p1[0]) / 6;
-        const c2y = p2[1] - (p3[1] - p1[1]) / 6;
-        d += `C ${c1x.toFixed(2)} ${c1y.toFixed(2)}, ${c2x.toFixed(2)} ${c2y.toFixed(2)}, ${p2[0].toFixed(2)} ${p2[1].toFixed(2)} `;
-      }
-      d += 'Z';
-      path.setAttribute('d', d);
-    }
-
-    function loop(t) { buildPath(t); requestAnimationFrame(loop); }
-    requestAnimationFrame(loop);
-  })();
-</script>
+<script src="/scripts/interactions.js"></script>
+<script src="/scripts/hero-blob.js" defer></script>
 
 </body>
 </html>

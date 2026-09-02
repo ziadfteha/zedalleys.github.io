@@ -9,31 +9,45 @@
 <meta property="og:description" content="Selected product design work by Ziad Fteha, including real case studies.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zedalleys.com/portfolio.html">
-<meta property="og:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta property="og:image" content="https://zedalleys.com/assets/og/portfolio.png">
+<meta property="og:site_name" content="Zed Alleys">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Work · Zed Alleys">
 <meta name="twitter:description" content="Selected product design work by Ziad Fteha, including real case studies.">
-<meta name="twitter:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta name="twitter:image" content="https://zedalleys.com/assets/og/portfolio.png">
 <link rel="canonical" href="https://zedalleys.com/portfolio.html">
-<link rel="icon" type="image/png" href="assets/images/zed-logo.png">
-<link rel="apple-touch-icon" href="assets/images/zed-logo.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0a1416">
-<link rel="preload" href="assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles/system.css">
-<link rel="stylesheet" href="styles/portfolio.css">
+<meta name="view-transition" content="same-origin">
+<link rel="preload" href="/assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles/system.css">
+<link rel="stylesheet" href="/styles/portfolio.css">
+<link rel="alternate" type="application/rss+xml" title="Zed Alleys — Journal" href="/feed.xml">
 <script defer data-domain="zedalleys.com" src="https://plausible.io/js/script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Work · Zed Alleys",
+  "url": "https://zedalleys.com/portfolio.html",
+  "about": "Selected product design case studies by Ziad Fteha."
+}
+</script>
 </head>
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-brand"><img src="assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
+  <a href="/" class="nav-brand"><img src="/assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
   <div class="nav-links" id="navLinks">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="portfolio.html" class="nav-link">Work</a>
-    <a href="blog.html" class="nav-link">Journal</a>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/portfolio.html" class="nav-link is-active" aria-current="page">Work</a>
+    <a href="/blog.html" class="nav-link">Journal</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
     <a href="/learning-hub/" class="nav-link">Learning Hub</a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -42,6 +56,7 @@
     <span class="nav-toggle-bar"></span>
   </button>
 </nav>
+
 
 <main>
 
@@ -70,11 +85,11 @@
 
 <!-- GRID VIEW -->
 <section class="gallery-grid" id="gridView">
-  <a class="gallery-card span-7 h-wide reveal" href="case-study-luqman.html" data-tags="education">
+  <a class="gallery-card span-7 h-wide reveal" href="/case-study-luqman.html" data-tags="education">
     <div class="card-img"><picture>
-      <source type="image/webp" srcset="assets/images/luqman/04-world-map.webp">
-      <img src="assets/images/luqman/04-world-map.jpg" width="1600" height="900" alt="Luqman — world map of camps">
-    </picture></div>
+  <source type="image/webp" srcset="/assets/images/luqman/04-world-map-640.webp 640w, /assets/images/luqman/04-world-map-960.webp 960w, /assets/images/luqman/04-world-map-1280.webp 1280w, /assets/images/luqman/04-world-map.webp 1600w" sizes="(min-width: 900px) 58vw, 100vw">
+  <img src="/assets/images/luqman/04-world-map.jpg" srcset="/assets/images/luqman/04-world-map-640.jpg 640w, /assets/images/luqman/04-world-map-960.jpg 960w, /assets/images/luqman/04-world-map-1280.jpg 1280w, /assets/images/luqman/04-world-map.jpg 1600w" sizes="(min-width: 900px) 58vw, 100vw" width="1600" height="900" alt="Luqman — world map of camps" fetchpriority="high" decoding="async">
+</picture></div>
     <div class="card-meta">
       <div>
         <div class="card-title">Luqman — Dalael Centre</div>
@@ -83,11 +98,11 @@
       <span class="card-arrow">↗</span>
     </div>
   </a>
-  <a class="gallery-card span-5 h-tall reveal" href="case-study-fabrihub.html" data-tags="marketplace">
+  <a class="gallery-card span-5 h-tall reveal" href="/case-study-fabrihub.html" data-tags="marketplace">
     <div class="card-img"><picture>
-      <source type="image/webp" srcset="assets/images/fabrihub/04-choose-service.webp">
-      <img loading="lazy" src="assets/images/fabrihub/04-choose-service.jpg" width="1600" height="900" alt="FabriHub — choose a manufacturing service">
-    </picture></div>
+  <source type="image/webp" srcset="/assets/images/fabrihub/04-choose-service-640.webp 640w, /assets/images/fabrihub/04-choose-service-960.webp 960w, /assets/images/fabrihub/04-choose-service-1280.webp 1280w, /assets/images/fabrihub/04-choose-service.webp 1600w" sizes="(min-width: 900px) 40vw, 100vw">
+  <img src="/assets/images/fabrihub/04-choose-service.jpg" srcset="/assets/images/fabrihub/04-choose-service-640.jpg 640w, /assets/images/fabrihub/04-choose-service-960.jpg 960w, /assets/images/fabrihub/04-choose-service-1280.jpg 1280w, /assets/images/fabrihub/04-choose-service.jpg 1600w" sizes="(min-width: 900px) 40vw, 100vw" width="1600" height="900" alt="FabriHub — choose a manufacturing service" loading="lazy" decoding="async">
+</picture></div>
     <div class="card-meta">
       <div>
         <div class="card-title">FabriHub</div>
@@ -96,11 +111,11 @@
       <span class="card-arrow">↗</span>
     </div>
   </a>
-  <a class="gallery-card span-7 h-wide reveal" href="case-study-ilearn.html" data-tags="education">
+  <a class="gallery-card span-7 h-wide reveal" href="/case-study-ilearn.html" data-tags="education">
     <div class="card-img"><picture>
-      <source type="image/webp" srcset="assets/images/ilearn/01-hero.webp">
-      <img loading="lazy" src="assets/images/ilearn/01-hero.jpg" width="1600" height="900" alt="i-Learn — interactive learning platform">
-    </picture></div>
+  <source type="image/webp" srcset="/assets/images/ilearn/01-hero-640.webp 640w, /assets/images/ilearn/01-hero-960.webp 960w, /assets/images/ilearn/01-hero-1280.webp 1280w, /assets/images/ilearn/01-hero.webp 1600w" sizes="(min-width: 900px) 58vw, 100vw">
+  <img src="/assets/images/ilearn/01-hero.jpg" srcset="/assets/images/ilearn/01-hero-640.jpg 640w, /assets/images/ilearn/01-hero-960.jpg 960w, /assets/images/ilearn/01-hero-1280.jpg 1280w, /assets/images/ilearn/01-hero.jpg 1600w" sizes="(min-width: 900px) 58vw, 100vw" width="1600" height="900" alt="i-Learn — interactive learning platform" loading="lazy" decoding="async">
+</picture></div>
     <div class="card-meta">
       <div>
         <div class="card-title">i‑Learn</div>
@@ -109,11 +124,11 @@
       <span class="card-arrow">↗</span>
     </div>
   </a>
-  <a class="gallery-card span-5 h-tall reveal" href="case-study-reportage.html" data-tags="real-estate">
+  <a class="gallery-card span-5 h-tall reveal" href="/case-study-reportage.html" data-tags="real-estate">
     <div class="card-img"><picture>
-      <source type="image/webp" srcset="assets/images/reportage/05-project-details.webp">
-      <img loading="lazy" src="assets/images/reportage/05-project-details.jpg" width="1400" height="1000" alt="Reportage — bilingual real-estate app">
-    </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/05-project-details-640.webp 640w, /assets/images/reportage/05-project-details-960.webp 960w, /assets/images/reportage/05-project-details-1280.webp 1280w, /assets/images/reportage/05-project-details.webp 1400w" sizes="(min-width: 900px) 40vw, 100vw">
+  <img src="/assets/images/reportage/05-project-details.jpg" srcset="/assets/images/reportage/05-project-details-640.jpg 640w, /assets/images/reportage/05-project-details-960.jpg 960w, /assets/images/reportage/05-project-details-1280.jpg 1280w, /assets/images/reportage/05-project-details.jpg 1400w" sizes="(min-width: 900px) 40vw, 100vw" width="1400" height="1000" alt="Reportage — bilingual real-estate app" loading="lazy" decoding="async">
+</picture></div>
     <div class="card-meta">
       <div>
         <div class="card-title">Reportage Properties</div>
@@ -126,51 +141,54 @@
 
 <!-- LIST VIEW -->
 <section class="gallery-index" id="listView" style="display:none;">
-  <a class="row" href="case-study-luqman.html"><span class="num">01</span><span class="title">Luqman — Dalael Centre</span><span class="meta">Education · Web</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2022</span><span class="arrow">→</span></a>
-  <a class="row" href="case-study-fabrihub.html"><span class="num">02</span><span class="title">FabriHub</span><span class="meta">Marketplace · Web</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2023</span><span class="arrow">→</span></a>
-  <a class="row" href="case-study-ilearn.html"><span class="num">03</span><span class="title">i‑Learn</span><span class="meta">Education · Web + App</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2021</span><span class="arrow">→</span></a>
-  <a class="row" href="case-study-reportage.html"><span class="num">04</span><span class="title">Reportage Properties</span><span class="meta">Real estate · iOS + Android</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2021</span><span class="arrow">→</span></a>
+  <a class="row" href="/case-study-luqman.html"><span class="num">01</span><span class="title">Luqman — Dalael Centre</span><span class="meta">Education · Web</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2022</span><span class="arrow">→</span></a>
+  <a class="row" href="/case-study-fabrihub.html"><span class="num">02</span><span class="title">FabriHub</span><span class="meta">Marketplace · Web</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2023</span><span class="arrow">→</span></a>
+  <a class="row" href="/case-study-ilearn.html"><span class="num">03</span><span class="title">i‑Learn</span><span class="meta">Education · Web + App</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2021</span><span class="arrow">→</span></a>
+  <a class="row" href="/case-study-reportage.html"><span class="num">04</span><span class="title">Reportage Properties</span><span class="meta">Real estate · iOS + Android</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2021</span><span class="arrow">→</span></a>
 </section>
 
 </main>
 
+
 <footer class="footer">
   <div class="footer-big">
-    Want the full archive? <a href="contact.html"><em>Ask me →</em></a>
+    Have a project? <a href="/contact.html"><em>Let's talk →</em></a>
+  </div>
+  <div class="footer-grid">
+    <div>
+      <h3>Sitemap</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Work</a></li>
+        <li><a href="/blog.html">Journal</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/learning-hub/">Learning Hub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Elsewhere</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="/feed.xml">RSS feed ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Get in touch</h3>
+      <ul>
+        <li><a href="mailto:ziadfteha@gmail.com">ziadfteha@gmail.com</a></li>
+      </ul>
+    </div>
   </div>
   <div class="footer-meta">
-    <span>© 2026 Zed Alleys</span>
-    <span>4 shown · more available on request</span>
+    <span>© 2026 Zed Alleys · All rights reserved</span>
+    <span>Designed &amp; built with care · Riyadh</span>
   </div>
 </footer>
 
-<script src="scripts/interactions.js"></script>
-<script>
-  // Filter
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
-      const f = btn.dataset.filter;
-      document.querySelectorAll('.gallery-card').forEach(c => {
-        const tags = (c.dataset.tags || '').split(' ');
-        const show = f === 'all' || tags.includes(f);
-        c.style.opacity = show ? '1' : '0.18';
-        c.style.pointerEvents = show ? 'auto' : 'none';
-      });
-    });
-  });
-  // View toggle
-  document.querySelectorAll('.view-toggle button').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.view-toggle button').forEach(b => b.classList.remove('is-active'));
-      btn.classList.add('is-active');
-      const v = btn.dataset.view;
-      document.getElementById('gridView').style.display = v === 'grid' ? 'grid' : 'none';
-      document.getElementById('listView').style.display = v === 'list' ? 'block' : 'none';
-    });
-  });
-</script>
+
+<script src="/scripts/interactions.js"></script>
+<script src="/scripts/portfolio.js" defer></script>
 
 </body>
 </html>

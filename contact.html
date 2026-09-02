@@ -4,36 +4,49 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact · Zed Alleys</title>
-<meta name="description" content="Get in touch with Ziad Fteha for product design, UX research, and design systems work — ziadfteha@gmail.com.">
+<meta name="description" content="Start a project with Ziad Fteha — Product Designer in Riyadh. Available for engagements, sprints and advisory. Response within ~24 hours.">
 <meta property="og:title" content="Contact · Zed Alleys">
-<meta property="og:description" content="Get in touch with Ziad Fteha for product design, UX research, and design systems work.">
+<meta property="og:description" content="Start a project with Ziad Fteha — Product Designer in Riyadh.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zedalleys.com/contact.html">
-<meta property="og:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta property="og:image" content="https://zedalleys.com/assets/og/contact.png">
+<meta property="og:site_name" content="Zed Alleys">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Contact · Zed Alleys">
-<meta name="twitter:description" content="Get in touch with Ziad Fteha for product design, UX research, and design systems work.">
-<meta name="twitter:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta name="twitter:description" content="Start a project with Ziad Fteha — Product Designer in Riyadh.">
+<meta name="twitter:image" content="https://zedalleys.com/assets/og/contact.png">
 <link rel="canonical" href="https://zedalleys.com/contact.html">
-<link rel="icon" type="image/png" href="assets/images/zed-logo.png">
-<link rel="apple-touch-icon" href="assets/images/zed-logo.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0a1416">
-<link rel="preload" href="assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles/system.css">
-<link rel="stylesheet" href="styles/contact.css">
+<meta name="view-transition" content="same-origin">
+<link rel="preload" href="/assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles/system.css">
+<link rel="stylesheet" href="/styles/contact.css">
+<link rel="alternate" type="application/rss+xml" title="Zed Alleys — Journal" href="/feed.xml">
 <script defer data-domain="zedalleys.com" src="https://plausible.io/js/script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact · Zed Alleys",
+  "url": "https://zedalleys.com/contact.html"
+}
+</script>
 </head>
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-brand"><img src="assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
+  <a href="/" class="nav-brand"><img src="/assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
   <div class="nav-links" id="navLinks">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="portfolio.html" class="nav-link">Work</a>
-    <a href="blog.html" class="nav-link">Journal</a>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/portfolio.html" class="nav-link">Work</a>
+    <a href="/blog.html" class="nav-link">Journal</a>
+    <a href="/contact.html" class="nav-link is-active" aria-current="page">Contact</a>
     <a href="/learning-hub/" class="nav-link">Learning Hub</a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -42,6 +55,7 @@
     <span class="nav-toggle-bar"></span>
   </button>
 </nav>
+
 
 <main class="contact-page">
 
@@ -68,9 +82,20 @@
         <span class="value">Riyadh · GMT+3</span>
       </div>
     </div>
+
+    <noscript>
+      <p class="lede" style="margin-top:32px">
+        The step‑by‑step form needs JavaScript. Email me directly at
+        <a href="mailto:ziadfteha@gmail.com" style="color:var(--accent);text-decoration:underline">ziadfteha@gmail.com</a>
+        with a few lines about your project, timeline and budget.
+      </p>
+    </noscript>
   </div>
 
-  <form class="contact-form" id="form" onsubmit="return false;">
+  <form class="contact-form" id="form" action="https://formspree.io/f/xeaqgzwg" method="POST">
+    <!-- Honeypot — real people leave this blank; bots fill it and Formspree drops the message. -->
+    <input type="text" name="_gotcha" id="f-gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+
     <div class="form-step-indicator">
       <div class="step-dot is-active" data-step="0"></div>
       <div class="step-dot" data-step="1"></div>
@@ -83,17 +108,17 @@
 
       <div class="form-group">
         <label class="form-label" for="f-name">Your name</label>
-        <input class="form-input" type="text" placeholder="Jane Doe" id="f-name" aria-describedby="f-name-error">
+        <input class="form-input" type="text" placeholder="Jane Doe" id="f-name" name="name" autocomplete="name" aria-describedby="f-name-error">
         <span class="form-error" id="f-name-error" role="alert" hidden>Please enter your name.</span>
       </div>
       <div class="form-group">
         <label class="form-label" for="f-email">Email address</label>
-        <input class="form-input" type="email" placeholder="jane@company.com" id="f-email" aria-describedby="f-email-error">
+        <input class="form-input" type="email" placeholder="jane@company.com" id="f-email" name="email" autocomplete="email" aria-describedby="f-email-error">
         <span class="form-error" id="f-email-error" role="alert" hidden>Please enter your email.</span>
       </div>
       <div class="form-group">
         <label class="form-label" for="f-company">Company / role <span style="color:var(--ink-dim);text-transform:none;letter-spacing:0;font-size:11px">(optional)</span></label>
-        <input class="form-input" type="text" placeholder="Acme Inc · Head of Product" id="f-company">
+        <input class="form-input" type="text" placeholder="Acme Inc · Head of Product" id="f-company" name="company" autocomplete="organization">
       </div>
 
       <div class="form-actions">
@@ -156,7 +181,7 @@
 
       <div class="form-group">
         <label class="form-label" for="f-message">What are you working on?</label>
-        <textarea class="form-textarea" placeholder="A few sentences about the problem you're trying to solve, who it's for, and what success looks like." id="f-message"></textarea>
+        <textarea class="form-textarea" placeholder="A few sentences about the problem you're trying to solve, who it's for, and what success looks like." id="f-message" name="message"></textarea>
       </div>
 
       <fieldset class="form-group">
@@ -173,7 +198,7 @@
         <button class="btn magnetic" type="button" data-back>
           <span>← Back</span>
         </button>
-        <button class="btn btn-primary magnetic" type="button" data-submit>
+        <button class="btn btn-primary magnetic" type="submit" data-submit>
           <span>Send message</span><span>↗</span>
         </button>
       </div>
@@ -183,9 +208,9 @@
     <div class="contact-success" data-screen="success" style="display:none;">
       <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="38"/><path d="M24 40l12 12 22-22" stroke-linecap="round" stroke-linejoin="round"/></svg>
       <h2 class="display" tabindex="-1"><em>Almost there.</em></h2>
-      <p id="success-message-sent" hidden>Thanks — your message is in. I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> on design systems.</p>
-      <p id="success-message-mailto" hidden>Your email app should have just opened with everything filled in — hit send there and I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> on design systems.</p>
-      <a href="index.html" class="btn"><span>Back home</span><span>→</span></a>
+      <p id="success-message-sent" hidden>Thanks — your message is in. I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="/blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> from the journal.</p>
+      <p id="success-message-mailto" hidden>Your email app should have just opened with everything filled in — hit send there and I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="/blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> from the journal.</p>
+      <a href="/" class="btn"><span>Back home</span><span>→</span></a>
 
       <div class="contact-fallback" id="contactFallback" hidden>
         <p class="contact-fallback-hint">Nothing happened? Not having an email app configured on this device isn't unusual — copy the message below and send it from any inbox to <a href="mailto:ziadfteha@gmail.com">ziadfteha@gmail.com</a>.</p>
@@ -197,173 +222,46 @@
 
 </main>
 
-<footer class="footer" style="margin-top: 60px;">
+
+<footer class="footer">
+  <div class="footer-big">
+    Have a project? <a href="/contact.html"><em>Let's talk →</em></a>
+  </div>
+  <div class="footer-grid">
+    <div>
+      <h3>Sitemap</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Work</a></li>
+        <li><a href="/blog.html">Journal</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/learning-hub/">Learning Hub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Elsewhere</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="/feed.xml">RSS feed ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Get in touch</h3>
+      <ul>
+        <li><a href="mailto:ziadfteha@gmail.com">ziadfteha@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="footer-meta">
-    <span>© 2026 Zed Alleys</span>
-    <span>Riyadh · Available now</span>
+    <span>© 2026 Zed Alleys · All rights reserved</span>
+    <span>Designed &amp; built with care · Riyadh</span>
   </div>
 </footer>
 
-<script src="scripts/interactions.js"></script>
-<script>
-  let step = 0;
-  const screens = document.querySelectorAll('.form-screen');
-  const dots = document.querySelectorAll('.step-dot');
 
-  function go(n) {
-    step = n;
-    screens.forEach((s, i) => { s.style.display = i === n ? 'block' : 'none'; });
-    dots.forEach((d, i) => {
-      d.classList.toggle('is-active', i === n);
-      d.classList.toggle('is-done', i < n);
-    });
-    if (window.__bindMagnetic) window.__bindMagnetic();
-    const heading = screens[n].querySelector('.form-step-label');
-    if (heading) heading.focus();
-  }
-
-  // Inline validation for step 1 — shared by the "Continue" button and final submit,
-  // since a user can go back and clear these fields after passing step 1 once.
-  function setFieldError(id, message) {
-    const input = document.getElementById(id);
-    const errorEl = document.getElementById(id + '-error');
-    if (message) {
-      input.setAttribute('aria-invalid', 'true');
-      errorEl.textContent = message;
-      errorEl.hidden = false;
-    } else {
-      input.removeAttribute('aria-invalid');
-      errorEl.hidden = true;
-    }
-    return !message;
-  }
-
-  function validateAboutYou() {
-    const name = document.getElementById('f-name').value.trim();
-    const email = document.getElementById('f-email').value.trim();
-    const nameOk = setFieldError('f-name', name ? '' : 'Please enter your name.');
-    const emailOk = setFieldError('f-email', email ? '' : 'Please enter your email.');
-    if (!nameOk) document.getElementById('f-name').focus();
-    else if (!emailOk) document.getElementById('f-email').focus();
-    return nameOk && emailOk;
-  }
-
-  document.querySelectorAll('[data-next]').forEach(b => b.addEventListener('click', () => {
-    if (step === 0 && !validateAboutYou()) return;
-    go(step + 1);
-  }));
-  document.querySelectorAll('[data-back]').forEach(b => b.addEventListener('click', () => go(step - 1)));
-
-  function selectedOptions(name) {
-    return Array.from(document.querySelectorAll(`.form-options[data-name="${name}"] .form-option-input:checked`))
-      .map(o => o.value);
-  }
-
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xeaqgzwg';
-
-  function showSuccess(mode) {
-    document.querySelectorAll('.form-screen').forEach((s) => (s.style.display = 'none'));
-    const successScreen = document.querySelector('[data-screen="success"]');
-    successScreen.style.display = 'block';
-    document.getElementById('success-message-sent').hidden = mode !== 'sent';
-    document.getElementById('success-message-mailto').hidden = mode !== 'mailto';
-    document.getElementById('contactFallback').hidden = mode !== 'mailto';
-    successScreen.querySelector('h2').focus();
-    dots.forEach((d) => {
-      d.classList.add('is-done');
-      d.classList.remove('is-active');
-    });
-  }
-
-  // Submit — try Formspree first so the message lands directly in an inbox;
-  // fall back to a pre-filled mailto: (with a copy-to-clipboard escape hatch)
-  // if the request fails, so a visitor never loses their message either way.
-  document.querySelector('[data-submit]').addEventListener('click', async () => {
-    // Step 0's fields are hidden while on a later step, so surface them first —
-    // validateAboutYou() then focuses the specific invalid field, if any.
-    go(0);
-    if (!validateAboutYou()) return;
-    const name = document.getElementById('f-name').value.trim();
-    const email = document.getElementById('f-email').value.trim();
-    const company = document.getElementById('f-company').value.trim();
-    const message = document.getElementById('f-message').value.trim();
-    const type = selectedOptions('type').join(', ') || '—';
-    const budget = selectedOptions('budget').join(', ') || '—';
-    const timeline = selectedOptions('timeline').join(', ') || '—';
-    const source = selectedOptions('source').join(', ') || '—';
-
-    const subject = `New project inquiry from ${name}`;
-    const bodyLines = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      company ? `Company / role: ${company}` : null,
-      `Project type: ${type}`,
-      `Budget: ${budget}`,
-      `Timeline: ${timeline}`,
-      `Found via: ${source}`,
-      '',
-      "What they're working on:",
-      message || '—',
-    ].filter(Boolean);
-
-    const submitBtn = document.querySelector('[data-submit]');
-    const submitLabel = submitBtn.querySelector('span');
-    const originalLabel = submitLabel.textContent;
-    submitBtn.disabled = true;
-    submitLabel.textContent = 'Sending…';
-
-    try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: 'POST',
-        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name,
-          email,
-          company: company || undefined,
-          message,
-          type,
-          budget,
-          timeline,
-          source,
-          _subject: subject,
-        }),
-      });
-      if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
-      showSuccess('sent');
-    } catch (err) {
-      const mailtoUrl = `mailto:ziadfteha@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-      window.location.href = mailtoUrl;
-
-      // The visitor can still copy the message and send it themselves if no
-      // mail app is configured to catch the mailto: either.
-      const fallbackMessage = document.getElementById('fallback-message');
-      if (fallbackMessage) {
-        fallbackMessage.value = [`To: ziadfteha@gmail.com`, `Subject: ${subject}`, '', ...bodyLines].join('\n');
-      }
-      showSuccess('mailto');
-    } finally {
-      submitBtn.disabled = false;
-      submitLabel.textContent = originalLabel;
-    }
-  });
-
-  const copyFallbackBtn = document.getElementById('copyFallback');
-  if (copyFallbackBtn) {
-    copyFallbackBtn.addEventListener('click', async () => {
-      const fallbackMessage = document.getElementById('fallback-message');
-      const label = copyFallbackBtn.querySelector('span');
-      const original = label.textContent;
-      try {
-        await navigator.clipboard.writeText(fallbackMessage.value);
-      } catch {
-        fallbackMessage.select();
-        document.execCommand('copy');
-      }
-      label.textContent = 'Copied!';
-      setTimeout(() => { label.textContent = original; }, 2000);
-    });
-  }
-</script>
+<script src="/scripts/interactions.js"></script>
+<script src="/scripts/contact-form.js" defer></script>
 
 </body>
 </html>

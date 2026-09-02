@@ -6,34 +6,76 @@
 <title>Reportage · Case Study · Zed Alleys</title>
 <meta name="description" content="Reportage — a bilingual iOS and Android app for a UAE property developer: every project and community, its renders, unit types, virtual tours and construction updates, in one place.">
 <meta property="og:title" content="Reportage · Case Study · Zed Alleys">
-<meta property="og:description" content="A bilingual real-estate app: projects, communities, unit types, virtual tours and construction updates, kept current from one admin.">
+<meta property="og:description" content="A bilingual iOS and Android app for a UAE property developer.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://zedalleys.com/case-study-reportage.html">
 <meta property="og:image" content="https://zedalleys.com/assets/images/reportage/01-hero.jpg">
+<meta property="og:site_name" content="Zed Alleys">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Reportage · Case Study · Zed Alleys">
-<meta name="twitter:description" content="A bilingual real-estate app: projects, communities, unit types, virtual tours and construction updates, kept current from one admin.">
+<meta name="twitter:description" content="A bilingual iOS and Android app for a UAE property developer.">
 <meta name="twitter:image" content="https://zedalleys.com/assets/images/reportage/01-hero.jpg">
 <link rel="canonical" href="https://zedalleys.com/case-study-reportage.html">
-<link rel="icon" type="image/png" href="assets/images/zed-logo.png">
-<link rel="apple-touch-icon" href="assets/images/zed-logo.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0a1416">
-<link rel="preload" href="assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles/system.css">
-<link rel="stylesheet" href="styles/case-study.css">
+<meta name="view-transition" content="same-origin">
+<link rel="preload" href="/assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles/system.css">
+<link rel="stylesheet" href="/styles/case-study.css">
+<link rel="alternate" type="application/rss+xml" title="Zed Alleys — Journal" href="/feed.xml">
 <script defer data-domain="zedalleys.com" src="https://plausible.io/js/script.js"></script>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Work",
+        "item": "https://zedalleys.com/portfolio.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Reportage Properties",
+        "item": "https://zedalleys.com/case-study-reportage.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Reportage Properties app",
+    "headline": "Reportage: a bilingual iOS & Android app for a UAE developer",
+    "about": "Bilingual real-estate mobile app",
+    "creator": {
+      "@type": "Person",
+      "name": "Ziad Fteha",
+      "url": "https://zedalleys.com/about.html"
+    },
+    "dateCreated": "2021",
+    "url": "https://zedalleys.com/case-study-reportage.html",
+    "image": "https://zedalleys.com/assets/images/reportage/01-hero.jpg"
+  }
+]
+</script>
 </head>
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-brand"><img src="assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
+  <a href="/" class="nav-brand"><img src="/assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
   <div class="nav-links" id="navLinks">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="portfolio.html" class="nav-link">Work</a>
-    <a href="blog.html" class="nav-link">Journal</a>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/portfolio.html" class="nav-link is-active" aria-current="page">Work</a>
+    <a href="/blog.html" class="nav-link">Journal</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
     <a href="/learning-hub/" class="nav-link">Learning Hub</a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -43,11 +85,12 @@
   </button>
 </nav>
 
+
 <main>
 
 <header class="case-hero">
   <div class="breadcrumb">
-    <a href="portfolio.html">← Work</a>
+    <a href="/portfolio.html">← Work</a>
     <span>/</span>
     <span>Reportage Properties · Real project</span>
   </div>
@@ -63,9 +106,9 @@
 
 <div class="case-hero-image">
   <picture>
-    <source type="image/webp" srcset="assets/images/reportage/01-hero.webp">
-    <img src="assets/images/reportage/01-hero.jpg" width="1600" height="900" alt="Reportage app — home, a project page, and a community's projects">
-  </picture>
+  <source type="image/webp" srcset="/assets/images/reportage/01-hero-640.webp 640w, /assets/images/reportage/01-hero-960.webp 960w, /assets/images/reportage/01-hero-1280.webp 1280w, /assets/images/reportage/01-hero.webp 1600w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/01-hero.jpg" srcset="/assets/images/reportage/01-hero-640.jpg 640w, /assets/images/reportage/01-hero-960.jpg 960w, /assets/images/reportage/01-hero-1280.jpg 1280w, /assets/images/reportage/01-hero.jpg 1600w" sizes="(min-width: 1000px) 1000px, 100vw" width="1600" height="900" alt="Reportage app — home, a project page, and a community's projects" fetchpriority="high" decoding="async">
+</picture>
 </div>
 
 <!-- BRIEF -->
@@ -89,13 +132,13 @@
 
 <div class="case-images">
   <div class="placeholder"><picture>
-    <source type="image/webp" srcset="assets/images/reportage/02-language.webp">
-    <img loading="lazy" src="assets/images/reportage/02-language.jpg" width="1200" height="900" alt="First run — choose Arabic or English">
-  </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/02-language-640.webp 640w, /assets/images/reportage/02-language-960.webp 960w, /assets/images/reportage/02-language.webp 1200w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/02-language.jpg" srcset="/assets/images/reportage/02-language-640.jpg 640w, /assets/images/reportage/02-language-960.jpg 960w, /assets/images/reportage/02-language.jpg 1200w" sizes="(min-width: 1000px) 1000px, 100vw" width="1200" height="900" alt="First run — choose Arabic or English" loading="lazy" decoding="async">
+</picture></div>
   <div class="placeholder"><picture>
-    <source type="image/webp" srcset="assets/images/reportage/04-projects.webp">
-    <img loading="lazy" src="assets/images/reportage/04-projects.jpg" width="1200" height="900" alt="Projects and communities listings">
-  </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/04-projects-640.webp 640w, /assets/images/reportage/04-projects-960.webp 960w, /assets/images/reportage/04-projects.webp 1200w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/04-projects.jpg" srcset="/assets/images/reportage/04-projects-640.jpg 640w, /assets/images/reportage/04-projects-960.jpg 960w, /assets/images/reportage/04-projects.jpg 1200w" sizes="(min-width: 1000px) 1000px, 100vw" width="1200" height="900" alt="Projects and communities listings" loading="lazy" decoding="async">
+</picture></div>
 </div>
 
 <!-- STICKY SCROLL — process -->
@@ -132,21 +175,21 @@
   </div>
   <div class="case-sticky-images" id="stickyImages">
     <div class="case-sticky-image is-active" data-step="0"><picture>
-      <source type="image/webp" srcset="assets/images/reportage/03-search.webp">
-      <img loading="lazy" src="assets/images/reportage/03-search.jpg" width="1200" height="900" alt="Search by community, type, bedrooms and budget, and the results">
-    </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/03-search-640.webp 640w, /assets/images/reportage/03-search-960.webp 960w, /assets/images/reportage/03-search.webp 1200w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/03-search.jpg" srcset="/assets/images/reportage/03-search-640.jpg 640w, /assets/images/reportage/03-search-960.jpg 960w, /assets/images/reportage/03-search.jpg 1200w" sizes="(min-width: 1000px) 1000px, 100vw" width="1200" height="900" alt="Search by community, type, bedrooms and budget, and the results" loading="lazy" decoding="async">
+</picture></div>
     <div class="case-sticky-image" data-step="1"><picture>
-      <source type="image/webp" srcset="assets/images/reportage/05-project-details.webp">
-      <img loading="lazy" src="assets/images/reportage/05-project-details.jpg" width="1400" height="1000" alt="A project page — overview and unit types tabs">
-    </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/05-project-details-640.webp 640w, /assets/images/reportage/05-project-details-960.webp 960w, /assets/images/reportage/05-project-details-1280.webp 1280w, /assets/images/reportage/05-project-details.webp 1400w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/05-project-details.jpg" srcset="/assets/images/reportage/05-project-details-640.jpg 640w, /assets/images/reportage/05-project-details-960.jpg 960w, /assets/images/reportage/05-project-details-1280.jpg 1280w, /assets/images/reportage/05-project-details.jpg 1400w" sizes="(min-width: 1000px) 1000px, 100vw" width="1400" height="1000" alt="A project page — overview and unit types tabs" loading="lazy" decoding="async">
+</picture></div>
     <div class="case-sticky-image" data-step="2"><picture>
-      <source type="image/webp" srcset="assets/images/reportage/06-virtual-tour.webp">
-      <img loading="lazy" src="assets/images/reportage/06-virtual-tour.jpg" width="1400" height="1000" alt="Unit type gallery and the 360-degree virtual tour">
-    </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/06-virtual-tour-640.webp 640w, /assets/images/reportage/06-virtual-tour-960.webp 960w, /assets/images/reportage/06-virtual-tour-1280.webp 1280w, /assets/images/reportage/06-virtual-tour.webp 1400w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/06-virtual-tour.jpg" srcset="/assets/images/reportage/06-virtual-tour-640.jpg 640w, /assets/images/reportage/06-virtual-tour-960.jpg 960w, /assets/images/reportage/06-virtual-tour-1280.jpg 1280w, /assets/images/reportage/06-virtual-tour.jpg 1400w" sizes="(min-width: 1000px) 1000px, 100vw" width="1400" height="1000" alt="Unit type gallery and the 360-degree virtual tour" loading="lazy" decoding="async">
+</picture></div>
     <div class="case-sticky-image" data-step="3"><picture>
-      <source type="image/webp" srcset="assets/images/reportage/07-construction.webp">
-      <img loading="lazy" src="assets/images/reportage/07-construction.jpg" width="1400" height="1000" alt="Construction updates — a dated timeline of site photos">
-    </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/07-construction-640.webp 640w, /assets/images/reportage/07-construction-960.webp 960w, /assets/images/reportage/07-construction-1280.webp 1280w, /assets/images/reportage/07-construction.webp 1400w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/07-construction.jpg" srcset="/assets/images/reportage/07-construction-640.jpg 640w, /assets/images/reportage/07-construction-960.jpg 960w, /assets/images/reportage/07-construction-1280.jpg 1280w, /assets/images/reportage/07-construction.jpg 1400w" sizes="(min-width: 1000px) 1000px, 100vw" width="1400" height="1000" alt="Construction updates — a dated timeline of site photos" loading="lazy" decoding="async">
+</picture></div>
   </div>
 </section>
 
@@ -161,9 +204,9 @@
 
 <div class="case-images full">
   <div class="placeholder"><picture>
-    <source type="image/webp" srcset="assets/images/reportage/09-media-center.webp">
-    <img loading="lazy" src="assets/images/reportage/09-media-center.jpg" width="1600" height="900" alt="Media center — news and an events gallery">
-  </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/09-media-center-640.webp 640w, /assets/images/reportage/09-media-center-960.webp 960w, /assets/images/reportage/09-media-center-1280.webp 1280w, /assets/images/reportage/09-media-center.webp 1600w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/09-media-center.jpg" srcset="/assets/images/reportage/09-media-center-640.jpg 640w, /assets/images/reportage/09-media-center-960.jpg 960w, /assets/images/reportage/09-media-center-1280.jpg 1280w, /assets/images/reportage/09-media-center.jpg 1600w" sizes="(min-width: 1000px) 1000px, 100vw" width="1600" height="900" alt="Media center — news and an events gallery" loading="lazy" decoding="async">
+</picture></div>
 </div>
 
 <!-- WHAT SHIPPED -->
@@ -192,13 +235,13 @@
 
 <div class="case-images">
   <div class="placeholder"><picture>
-    <source type="image/webp" srcset="assets/images/reportage/08-offers.webp">
-    <img loading="lazy" src="assets/images/reportage/08-offers.jpg" width="1400" height="1000" alt="Offers list and a full-screen offer popup with register form">
-  </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/08-offers-640.webp 640w, /assets/images/reportage/08-offers-960.webp 960w, /assets/images/reportage/08-offers-1280.webp 1280w, /assets/images/reportage/08-offers.webp 1400w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/08-offers.jpg" srcset="/assets/images/reportage/08-offers-640.jpg 640w, /assets/images/reportage/08-offers-960.jpg 960w, /assets/images/reportage/08-offers-1280.jpg 1280w, /assets/images/reportage/08-offers.jpg 1400w" sizes="(min-width: 1000px) 1000px, 100vw" width="1400" height="1000" alt="Offers list and a full-screen offer popup with register form" loading="lazy" decoding="async">
+</picture></div>
   <div class="placeholder"><picture>
-    <source type="image/webp" srcset="assets/images/reportage/10-contact.webp">
-    <img loading="lazy" src="assets/images/reportage/10-contact.jpg" width="1200" height="900" alt="Contact — department enquiry forms and office locations">
-  </picture></div>
+  <source type="image/webp" srcset="/assets/images/reportage/10-contact-640.webp 640w, /assets/images/reportage/10-contact-960.webp 960w, /assets/images/reportage/10-contact.webp 1200w" sizes="(min-width: 1000px) 1000px, 100vw">
+  <img src="/assets/images/reportage/10-contact.jpg" srcset="/assets/images/reportage/10-contact-640.jpg 640w, /assets/images/reportage/10-contact-960.jpg 960w, /assets/images/reportage/10-contact.jpg 1200w" sizes="(min-width: 1000px) 1000px, 100vw" width="1200" height="900" alt="Contact — department enquiry forms and office locations" loading="lazy" decoding="async">
+</picture></div>
 </div>
 
 <!-- LEARNINGS -->
@@ -212,35 +255,52 @@
 </section>
 
 <!-- NEXT -->
-<a href="case-study-luqman.html" class="next-project">
+<a href="/case-study-luqman.html" class="next-project">
   <span class="label">Next case</span>
   <div class="display title">Luqman <span class="arrow">→</span></div>
 </a>
 
 </main>
 
+
 <footer class="footer">
+  <div class="footer-big">
+    Have a project? <a href="/contact.html"><em>Let's talk →</em></a>
+  </div>
+  <div class="footer-grid">
+    <div>
+      <h3>Sitemap</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Work</a></li>
+        <li><a href="/blog.html">Journal</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/learning-hub/">Learning Hub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Elsewhere</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="/feed.xml">RSS feed ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Get in touch</h3>
+      <ul>
+        <li><a href="mailto:ziadfteha@gmail.com">ziadfteha@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="footer-meta">
-    <span>© 2026 Zed Alleys</span>
-    <span><a href="portfolio.html">← Back to all work</a></span>
+    <span>© 2026 Zed Alleys · All rights reserved</span>
+    <span>Designed &amp; built with care · Riyadh</span>
   </div>
 </footer>
 
-<script src="scripts/interactions.js"></script>
-<script>
-  // Sticky scroll — sync image to active text block
-  const blocks = document.querySelectorAll('.case-sticky-text-block');
-  const images = document.querySelectorAll('.case-sticky-image');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(en => {
-      if (en.isIntersecting) {
-        const step = en.target.dataset.step;
-        images.forEach(im => im.classList.toggle('is-active', im.dataset.step === step));
-      }
-    });
-  }, { threshold: 0.6 });
-  blocks.forEach(b => obs.observe(b));
-</script>
 
+<script src="/scripts/interactions.js"></script>
+<script src="/scripts/case-study.js" defer></script>
 </body>
 </html>

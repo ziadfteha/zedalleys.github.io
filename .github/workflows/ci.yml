@@ -7,16 +7,47 @@ on:
     branches: [main]
 
 jobs:
-  lint-and-format:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
       - run: npm ci
       - run: npm run lint
       - run: npm run format:check
+      - name: Build site (assets + Eleventy)
+        run: npm run build
+      - name: Fail if the committed HTML is stale
+        # Only the text output is checked — sharp/libvips can encode PNGs a
+        # few bytes differently across platforms, so the generated images
+        # aren't diff-gated here.
+        run: |
+          if ! git diff --quiet -- '*.html' '*.xml' 'journal/'; then
+            echo "::error::Generated HTML is out of date — run 'npm run build' and commit the result."
+            git --no-pager diff --stat -- '*.html' '*.xml' 'journal/'
+            exit 1
+          fi
+      - name: Validate generated HTML
+        run: npm run validate
+
+  learning-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: _hub/package-lock.json
+      - name: Install Learning Hub deps
+        run: npm ci
+        working-directory: _hub
+      - name: Build Learning Hub (type-check + Vite)
+        run: npm run build
+        working-directory: _hub
 
   link-check:
     runs-on: ubuntu-latest
@@ -30,3 +61,4 @@ jobs:
             --exclude 'https://.*'
             --root-dir .
             './*.html'
+            './journal/**/*.html'

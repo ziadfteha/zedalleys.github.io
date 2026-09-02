@@ -1,0 +1,14 @@
+---
+permalink: sitemap.xml
+layout: false
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for page in collections.all | sort(false, false, "url") %}
+{%- set url = page.url %}
+{%- if url and (url == "/" or (url | endsWith(".html")) or (url | endsWith("/"))) and url != "/404.html" and not page.data.noindex %}
+  <url><loc>{{ site.url }}{{ url }}</loc>{% if page.data.tags and "post" in page.data.tags %}<lastmod>{{ page.date | isoDate }}</lastmod>{% endif %}</url>
+{%- endif %}
+{%- endfor %}
+</urlset>

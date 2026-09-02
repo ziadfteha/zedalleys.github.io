@@ -1,0 +1,53 @@
+---
+layout: base.njk
+pageStyle: blog
+navKey: blog
+ogType: article
+extraHead: |
+  <style>
+    .progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      background: var(--accent);
+      z-index: 200;
+      width: 0;
+      transition: width 0.1s linear;
+    }
+  </style>
+extraScripts: |
+  <script src="/scripts/article.js" defer></script>
+---
+{%- set words = content | striptags -%}
+<div class="progress-bar" id="progress"></div>
+
+<main>
+
+<header class="article-hero">
+  <div class="meta">
+    <a href="/blog.html">← Journal</a>
+    {%- if category %}<span class="pill">{{ category }}</span>{% endif %}
+    <span>{{ page.date | readableDate }}</span>
+    <span>· {{ words | readingTime }} min read</span>
+  </div>
+  <h1 class="split-line">{{ heading or title }}</h1>
+  {%- if lede %}<p class="lede">{{ lede }}</p>{% endif %}
+</header>
+
+{%- if cover %}
+<div class="article-cover">
+  <img src="{{ cover }}" alt="{{ coverAlt or '' }}" width="1600" height="500" decoding="async">
+</div>
+{%- else %}
+<!-- TODO(zed): add a cover image — set `cover: /assets/images/journal/<slug>.jpg`
+     (1600×500, with a .webp sibling) in this post's front matter. -->
+<div class="article-cover placeholder">
+  <div class="placeholder-label">Article cover · 16:5</div>
+</div>
+{%- endif %}
+
+<article class="article-body">
+{{ content | safe }}
+</article>
+
+</main>

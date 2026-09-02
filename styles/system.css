@@ -48,6 +48,32 @@
   --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* Self-hosted — avoids the fonts.googleapis.com -> fonts.gstatic.com
+   round trip that blocked first paint. Same files Google Fonts served,
+   just same-origin. Variable fonts: one file covers the declared
+   weight range. */
+@font-face {
+  font-family: "Fraunces";
+  font-style: italic;
+  font-weight: 200 500;
+  font-display: swap;
+  src: url("../assets/fonts/fraunces-italic-variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 300 600;
+  font-display: swap;
+  src: url("../assets/fonts/fraunces-normal-variable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url("../assets/fonts/jetbrains-mono-variable.woff2") format("woff2");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

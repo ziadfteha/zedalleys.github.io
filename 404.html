@@ -4,13 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Page not found · Zed Alleys</title>
+<meta name="description" content="That page doesn&#39;t exist or has moved — head back home or browse the work archive.">
 <meta name="robots" content="noindex">
-<link rel="icon" type="image/png" href="assets/images/zed-logo.png">
-<link rel="apple-touch-icon" href="assets/images/zed-logo.png">
-<link rel="manifest" href="site.webmanifest">
+<meta property="og:title" content="Page not found · Zed Alleys">
+<meta property="og:description" content="That page doesn&#39;t exist or has moved — head back home or browse the work archive.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zedalleys.com/404.html">
+<meta property="og:image" content="https://zedalleys.com/assets/og/default.png">
+<meta property="og:site_name" content="Zed Alleys">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Page not found · Zed Alleys">
+<meta name="twitter:description" content="That page doesn&#39;t exist or has moved — head back home or browse the work archive.">
+<meta name="twitter:image" content="https://zedalleys.com/assets/og/default.png">
+<link rel="canonical" href="https://zedalleys.com/404.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0a1416">
-<link rel="preload" href="assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles/system.css">
+<meta name="view-transition" content="same-origin">
+<link rel="preload" href="/assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles/system.css">
+<link rel="alternate" type="application/rss+xml" title="Zed Alleys — Journal" href="/feed.xml">
 <style>
   .not-found {
     min-height: 100vh;
@@ -26,18 +42,19 @@
   .not-found .lede { max-width: 560px; margin: 0 auto 48px; }
   .not-found .not-found-actions { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 </style>
+
 <script defer data-domain="zedalleys.com" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-brand"><img src="assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
+  <a href="/" class="nav-brand"><img src="/assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
   <div class="nav-links" id="navLinks">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="portfolio.html" class="nav-link">Work</a>
-    <a href="blog.html" class="nav-link">Journal</a>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about.html" class="nav-link">About</a>
+    <a href="/portfolio.html" class="nav-link">Work</a>
+    <a href="/blog.html" class="nav-link">Journal</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
     <a href="/learning-hub/" class="nav-link">Learning Hub</a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -47,23 +64,55 @@
   </button>
 </nav>
 
+
 <main class="not-found">
   <span class="eyebrow">404 · Not found</span>
   <h1 class="display"><em>Wrong turn.</em></h1>
   <p class="lede">This page doesn't exist, or it moved. Try the work archive, or head back home.</p>
   <div class="not-found-actions">
-    <a href="index.html" class="btn btn-primary magnetic"><span>Back home</span><span>→</span></a>
-    <a href="portfolio.html" class="btn magnetic"><span>See selected work</span></a>
+    <a href="/" class="btn btn-primary magnetic"><span>Back home</span><span>→</span></a>
+    <a href="/portfolio.html" class="btn magnetic"><span>See selected work</span></a>
   </div>
 </main>
 
+
 <footer class="footer">
+  <div class="footer-big">
+    Have a project? <a href="/contact.html"><em>Let's talk →</em></a>
+  </div>
+  <div class="footer-grid">
+    <div>
+      <h3>Sitemap</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Work</a></li>
+        <li><a href="/blog.html">Journal</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/learning-hub/">Learning Hub</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Elsewhere</h3>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="/feed.xml">RSS feed ↗</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Get in touch</h3>
+      <ul>
+        <li><a href="mailto:ziadfteha@gmail.com">ziadfteha@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="footer-meta">
-    <span>© 2026 Zed Alleys</span>
-    <span>Riyadh · Available now</span>
+    <span>© 2026 Zed Alleys · All rights reserved</span>
+    <span>Designed &amp; built with care · Riyadh</span>
   </div>
 </footer>
 
-<script src="scripts/interactions.js"></script>
+
+<script src="/scripts/interactions.js"></script>
 </body>
 </html>

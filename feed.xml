@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Zed Alleys — Journal</title>
+  <subtitle>Design writing and essays by Ziad Fteha.</subtitle>
+  <link href="https://zedalleys.com/feed.xml" rel="self" />
+  <link href="https://zedalleys.com/" />
+  <updated>2026-04-28T00:00:00Z</updated>
+  <id>https://zedalleys.com/</id>
+  <author>
+    <name>Ziad Fteha</name>
+    <email>ziadfteha@gmail.com</email>
+  </author>
+  <entry>
+    <title>The portfolio you don&#39;t put online · Zed Alleys</title>
+    <link href="https://zedalleys.com/journal/the-portfolio-you-dont-put-online/" />
+    <updated>2026-04-28T00:00:00Z</updated>
+    <id>https://zedalleys.com/journal/the-portfolio-you-dont-put-online/</id>
+    <content type="html">&lt;p&gt;Every designer I know maintains a portfolio. Almost none of them maintain a &lt;strong&gt;private&lt;/strong&gt; one — and that&#39;s the one that actually moves their career forward.&lt;/p&gt;
+&lt;p&gt;Public portfolios are pitches. They flatten. They smooth over the messy middle, the dead ends, the weeks you spent debugging your own assumptions. They have to, because hiring managers don&#39;t have time for the messy middle. But you do, and the messy middle is where your judgment lives.&lt;/p&gt;
+&lt;h2&gt;Three documents, not one.&lt;/h2&gt;
+&lt;p&gt;Once a quarter, I sit down with three blank docs and fill them in. The whole exercise takes a Saturday morning. Here&#39;s what goes in each.&lt;/p&gt;
+&lt;h3&gt;1. The Decisions doc.&lt;/h3&gt;
+&lt;p&gt;A bullet list of every non‑obvious decision you made in the last quarter, what you chose, and what you nearly chose instead. Don&#39;t write why — just the fork. The &amp;quot;why&amp;quot; is what you&#39;ll re‑examine in six months when you can see whether you were right.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The point of the Decisions doc isn&#39;t to be right. It&#39;s to be calibrated.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;2. The Killed Ideas file.&lt;/h3&gt;
+&lt;p&gt;A graveyard of work that didn&#39;t ship — flows you cut, components you deprecated, projects that died in stakeholder review. Most designers are taught to be ashamed of these. They shouldn&#39;t be. &lt;strong&gt;Killed ideas are the most honest record of your taste.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The pattern that emerges over time is the most valuable signal you&#39;ll ever get about what kind of designer you actually are. Mine, for instance, shows I kill clever interactions and keep boring legible ones, almost without exception. That&#39;s not a critique of my work. That&#39;s a job description.&lt;/p&gt;
+&lt;h3&gt;3. The Embarrassment Archive.&lt;/h3&gt;
+&lt;p&gt;Screenshots of your old work, dated. No commentary. Just the receipts.&lt;/p&gt;
+&lt;p&gt;Look at it once a year. If you don&#39;t cringe at something from twelve months ago, you&#39;ve stopped growing. If you cringe at everything, you&#39;ve grown too fast and you&#39;re under‑confident.&lt;/p&gt;
+&lt;h2&gt;Why it works.&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;It separates &lt;code&gt;marketing&lt;/code&gt; from &lt;code&gt;memory&lt;/code&gt;. Public portfolios bend toward the audience. Private ones bend toward the truth.&lt;/li&gt;
+&lt;li&gt;It builds a longitudinal view of your taste. You can see your judgment evolve, in your own handwriting.&lt;/li&gt;
+&lt;li&gt;It&#39;s the single best prep doc for any interview, performance review, or promotion case you&#39;ll ever write — because it&#39;s already written.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;One rule.&lt;/h2&gt;
+&lt;p&gt;Never share it. The moment you imagine an audience, the document starts lying to you. The whole point is that it&#39;s the version of your portfolio that doesn&#39;t have to perform.&lt;/p&gt;
+&lt;p&gt;That&#39;s the one that makes you better.&lt;/p&gt;
+</content>
+  </entry>
+</feed>

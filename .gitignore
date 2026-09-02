@@ -1,6 +1,11 @@
 .claude/
 node_modules/
 
+# Eleventy / build scratch
+.cache/
+_site/
+_scratch/
+
 # Learning Hub sub-app (_hub/) — build tooling, not deployed
 _hub/node_modules/
 _hub/dist/

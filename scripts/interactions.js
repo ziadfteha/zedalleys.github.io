@@ -86,39 +86,11 @@
     }
   });
 
-  // Page transition on internal nav clicks
-  const overlay = document.createElement("div");
-  overlay.className = "page-transition";
-  document.body.appendChild(overlay);
-
-  document.addEventListener("click", (e) => {
-    const link = e.target.closest("a[href]");
-    if (!link) return;
-    const href = link.getAttribute("href");
-    if (
-      !href ||
-      href.startsWith("#") ||
-      href.startsWith("http") ||
-      href.startsWith("mailto:") ||
-      link.hasAttribute("target")
-    )
-      return;
-    e.preventDefault();
-    overlay.classList.add("is-active");
-    setTimeout(
-      () => {
-        window.location.href = href;
-      },
-      reduceMotion ? 0 : 700,
-    );
-  });
-
-  // Active nav link
-  const path = window.location.pathname.split("/").pop() || "index.html";
-  document.querySelectorAll(".nav-link").forEach((l) => {
-    const h = l.getAttribute("href");
-    if (h === path || (path === "index.html" && h === "/")) l.classList.add("is-active");
-  });
+  // Cross-page transitions are handled natively by the View Transitions API
+  // (see <meta name="view-transition"> + the @view-transition rule in
+  // system.css). No click interception, no artificial delay — browsers that
+  // don't support it simply navigate instantly. The active nav link is now
+  // marked server-side with .is-active / aria-current.
 
   // Nav gains a readable backdrop once the page scrolls under it
   const nav = document.querySelector(".nav");
@@ -153,7 +125,7 @@
     document.querySelectorAll(".nav-link").forEach((link) =>
       link.addEventListener("click", () => {
         // Close instantly (no slide-out) — the page is about to navigate away,
-        // so an animated close just flashes the tapped label before the transition overlay catches up.
+        // so an animated close just flashes the tapped label mid-transition.
         navLinksPanel.style.transition = "none";
         closeMenu();
       }),

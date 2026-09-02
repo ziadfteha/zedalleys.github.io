@@ -9,31 +9,69 @@
 <meta property="og:description" content="Expert Product Designer, UX researcher and mentor based in Riyadh, Saudi Arabia.">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://zedalleys.com/about.html">
-<meta property="og:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta property="og:image" content="https://zedalleys.com/assets/og/about.png">
+<meta property="og:site_name" content="Zed Alleys">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About · Zed Alleys">
 <meta name="twitter:description" content="Expert Product Designer, UX researcher and mentor based in Riyadh, Saudi Arabia.">
-<meta name="twitter:image" content="https://zedalleys.com/assets/images/zed-logo.png">
+<meta name="twitter:image" content="https://zedalleys.com/assets/og/about.png">
 <link rel="canonical" href="https://zedalleys.com/about.html">
-<link rel="icon" type="image/png" href="assets/images/zed-logo.png">
-<link rel="apple-touch-icon" href="assets/images/zed-logo.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#0a1416">
-<link rel="preload" href="assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="styles/system.css">
-<link rel="stylesheet" href="styles/about.css">
+<meta name="view-transition" content="same-origin">
+<link rel="preload" href="/assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles/system.css">
+<link rel="stylesheet" href="/styles/about.css">
+<link rel="alternate" type="application/rss+xml" title="Zed Alleys — Journal" href="/feed.xml">
 <script defer data-domain="zedalleys.com" src="https://plausible.io/js/script.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ziad Fteha",
+  "alternateName": "Zed Alleys",
+  "jobTitle": "Product Designer",
+  "description": "Expert Product Designer, UX researcher and mentor based in Riyadh, Saudi Arabia.",
+  "url": "https://zedalleys.com/about.html",
+  "image": "https://zedalleys.com/assets/og/about.png",
+  "sameAs": [
+    "https://www.linkedin.com/in/ziadfteha/"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Riyadh",
+    "addressCountry": "SA"
+  },
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "Alexandria University — Faculty of Fine Arts"
+  },
+  "knowsAbout": [
+    "UX Research",
+    "Design Systems",
+    "Wireframing & Prototyping",
+    "Usability Testing",
+    "Information Architecture",
+    "iOS & Android Design",
+    "Customer Experience"
+  ]
+}
+</script>
 </head>
 <body>
 
 <nav class="nav">
-  <a href="index.html" class="nav-brand"><img src="assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
+  <a href="/" class="nav-brand"><img src="/assets/images/zed-logo-light.png" alt="Zed Alleys" class="brand-mark" width="161" height="60"><span class="brand-word">Alleys</span></a>
   <div class="nav-links" id="navLinks">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="about.html" class="nav-link">About</a>
-    <a href="portfolio.html" class="nav-link">Work</a>
-    <a href="blog.html" class="nav-link">Journal</a>
-    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="/" class="nav-link">Home</a>
+    <a href="/about.html" class="nav-link is-active" aria-current="page">About</a>
+    <a href="/portfolio.html" class="nav-link">Work</a>
+    <a href="/blog.html" class="nav-link">Journal</a>
+    <a href="/contact.html" class="nav-link">Contact</a>
     <a href="/learning-hub/" class="nav-link">Learning Hub</a>
   </div>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -42,6 +80,7 @@
     <span class="nav-toggle-bar"></span>
   </button>
 </nav>
+
 
 <main>
 
@@ -61,6 +100,11 @@
 
 <!-- INTRO -->
 <section class="about-intro">
+  <!-- TODO(zed): drop a real portrait in at /assets/images/portrait.jpg
+       (approx 900×1100, plus a .webp sibling) and replace the placeholder
+       div below with:
+       <img class="photo" src="/assets/images/portrait.jpg" width="900" height="1100"
+            alt="Ziad Fteha" loading="lazy" decoding="async"> -->
   <div class="placeholder photo">
     <div class="placeholder-label">Portrait — drop in</div>
   </div>
@@ -71,6 +115,8 @@
     <div class="about-cta">
       <a href="mailto:ziadfteha@gmail.com" class="btn btn-primary magnetic"><span>Email me</span><span>↗</span></a>
       <a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener" class="btn magnetic"><span>LinkedIn</span><span>→</span></a>
+      <!-- TODO(zed): add a downloadable CV — drop assets/ziad-fteha-cv.pdf and uncomment:
+      <a href="/assets/ziad-fteha-cv.pdf" class="btn magnetic" download><span>Download CV</span><span>↓</span></a> -->
     </div>
   </div>
 </section>
@@ -209,22 +255,22 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 </main>
+
 
 <footer class="footer">
   <div class="footer-big">
-    Have a project? <a href="contact.html"><em>Let's talk →</em></a>
+    Have a project? <a href="/contact.html"><em>Let's talk →</em></a>
   </div>
   <div class="footer-grid">
     <div>
       <h3>Sitemap</h3>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="portfolio.html">Work</a></li>
-        <li><a href="blog.html">Journal</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/portfolio.html">Work</a></li>
+        <li><a href="/blog.html">Journal</a></li>
+        <li><a href="/contact.html">Contact</a></li>
         <li><a href="/learning-hub/">Learning Hub</a></li>
       </ul>
     </div>
@@ -232,6 +278,7 @@
       <h3>Elsewhere</h3>
       <ul>
         <li><a href="https://www.linkedin.com/in/ziadfteha/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+        <li><a href="/feed.xml">RSS feed ↗</a></li>
       </ul>
     </div>
     <div>
@@ -243,11 +290,11 @@
   </div>
   <div class="footer-meta">
     <span>© 2026 Zed Alleys · All rights reserved</span>
-    <span>Designed & built with care · Riyadh</span>
+    <span>Designed &amp; built with care · Riyadh</span>
   </div>
 </footer>
 
-<script src="scripts/interactions.js"></script>
 
+<script src="/scripts/interactions.js"></script>
 </body>
 </html>

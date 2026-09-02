@@ -1,0 +1,66 @@
+{%- set pageTitle = title -%}
+{%- set cardTitle = socialTitle or title -%}
+{%- set cardDesc = socialDescription or description -%}
+{%- set canonicalUrl = canonical or (site.url + page.url) -%}
+{%- set ogImageUrl = site.url + (ogImage or site.defaultOgImage) -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ pageTitle }}</title>
+<meta name="description" content="{{ description }}">
+{%- if noindex %}
+<meta name="robots" content="noindex">
+{%- endif %}
+<meta property="og:title" content="{{ cardTitle }}">
+<meta property="og:description" content="{{ cardDesc }}">
+<meta property="og:type" content="{{ ogType or 'website' }}">
+<meta property="og:url" content="{{ canonicalUrl }}">
+<meta property="og:image" content="{{ ogImageUrl }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ cardTitle }}">
+<meta name="twitter:description" content="{{ cardDesc }}">
+<meta name="twitter:image" content="{{ ogImageUrl }}">
+<link rel="canonical" href="{{ canonicalUrl }}">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="512x512" href="/assets/images/zed-logo.png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0a1416">
+<meta name="view-transition" content="same-origin">
+<link rel="preload" href="/assets/fonts/fraunces-italic-variable.woff2" as="font" type="font/woff2" crossorigin>
+{%- if preloadImage %}
+<link rel="preload" as="image" href="{{ preloadImage }}" fetchpriority="high">
+{%- endif %}
+<link rel="stylesheet" href="/styles/system.css">
+{%- if pageStyle %}
+<link rel="stylesheet" href="/styles/{{ pageStyle }}.css">
+{%- endif %}
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }} — Journal" href="/feed.xml">
+{%- if extraHead %}
+{{ extraHead | safe }}
+{%- endif %}
+<script defer data-domain="zedalleys.com" src="https://plausible.io/js/script.js"></script>
+{%- if jsonld %}
+<script type="application/ld+json">
+{{ jsonld | jsonld | safe }}
+</script>
+{%- endif %}
+</head>
+<body{% if bodyClass %} class="{{ bodyClass }}"{% endif %}>
+
+{% include "partials/nav.njk" %}
+
+{{ content | safe }}
+
+{% include "partials/footer.njk" %}
+
+<script src="/scripts/interactions.js"></script>
+{%- if extraScripts %}
+{{ extraScripts | safe }}
+{%- endif %}
+</body>
+</html>

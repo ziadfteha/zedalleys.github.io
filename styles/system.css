@@ -470,26 +470,20 @@ img {
 
 /* ============ PAGE TRANSITION ============ */
 
-.page-transition {
-  position: fixed;
-  inset: 0;
-  background: var(--accent);
-  z-index: 9998;
-  transform: translateY(100%);
-  pointer-events: none;
+/* Native cross-document transitions — a quiet cross-fade, no JS, no delay.
+   Browsers without support just navigate normally. */
+@view-transition {
+  navigation: auto;
 }
-.page-transition.is-active {
-  animation: pageTransition 1.4s var(--ease-in-out) forwards;
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.28s;
 }
-@keyframes pageTransition {
-  0% {
-    transform: translateY(100%);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-100%);
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
 }
 

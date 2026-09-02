@@ -1,0 +1,73 @@
+---
+permalink: blog.html
+navKey: blog
+pageStyle: blog
+title: Journal · Zed Alleys
+description: Design writing and essays by Ziad Fteha — notes on craft, career and the moments where products earn or lose trust.
+socialDescription: Design writing and essays by Ziad Fteha, Product Designer.
+ogImage: /assets/og/blog.png
+jsonld:
+  "@context": https://schema.org
+  "@type": Blog
+  name: Zed Alleys — Journal
+  url: https://zedalleys.com/blog.html
+  author:
+    "@type": Person
+    name: Ziad Fteha
+---
+{%- set posts = collections.post -%}
+<main>
+
+<header class="blog-hero">
+  <span class="eyebrow reveal">Journal · Notes from the desk</span>
+  <h1 class="display split-line"><em>Writing</em> about design.</h1>
+  <p class="lede reveal">Half‑formed thoughts on craft, career and the moments where products either earn trust or quietly lose it.</p>
+</header>
+
+{%- if posts.length %}
+{%- set featured = posts[0] %}
+<a class="blog-featured reveal" href="{{ featured.url }}">
+  <div class="image">
+    {%- if featured.data.cover %}
+    <img src="{{ featured.data.cover }}" alt="" width="720" height="480" loading="lazy" decoding="async">
+    {%- else %}
+    <div class="placeholder" style="height:100%"><div class="placeholder-label">{{ featured.data.category or 'Essay' }}</div></div>
+    {%- endif %}
+  </div>
+  <div class="content">
+    <div class="meta">
+      {%- if featured.data.category %}<span class="pill">{{ featured.data.category }}</span>{% endif %}
+      <span>{{ featured.date | readableDate }}</span>
+      <span>· {{ featured.templateContent | striptags | readingTime }} min read</span>
+    </div>
+    <h2>{{ featured.data.heading or featured.data.title }}</h2>
+    <p>{{ featured.data.lede or featured.data.description }}</p>
+  </div>
+</a>
+
+{%- if posts.length > 1 %}
+<section class="blog-list">
+  {%- for post in posts.slice(1) %}
+  <a class="blog-row" href="{{ post.url }}">
+    <span class="num">{{ loop.index | pad2 }}</span>
+    <span class="date">{{ post.date | readableDate }}</span>
+    <span class="title">{{ post.data.heading or post.data.title }}</span>
+    <span class="read">{{ post.templateContent | striptags | readingTime }} min</span>
+    <span class="arrow">→</span>
+  </a>
+  {%- endfor %}
+</section>
+{%- endif %}
+
+{%- else %}
+<section class="blog-coming-soon reveal">
+  <div class="placeholder">
+    <div class="placeholder-label">Coming soon</div>
+  </div>
+  <h2 class="display">First essay <em class="accent">coming soon.</em></h2>
+  <p class="lede">The journal is on its way — check back soon, or get in touch if there's something specific you'd like me to write about.</p>
+  <a href="/contact.html" class="btn btn-primary magnetic" style="margin-top: 8px;"><span>Get in touch</span><span>→</span></a>
+</section>
+{%- endif %}
+
+</main>

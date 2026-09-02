@@ -1,0 +1,17 @@
+# Keep line endings deterministic so `prettier --check` and the Eleventy
+# build behave the same on Windows and on CI.
+*.js   text eol=lf
+*.mjs  text eol=lf
+*.cjs  text eol=lf
+*.njk  text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.html text eol=lf
+*.css  text eol=lf
+*.xml  text eol=lf
+*.svg  text eol=lf
+
+*.woff2 binary
+*.png   binary
+*.jpg   binary
+*.webp  binary

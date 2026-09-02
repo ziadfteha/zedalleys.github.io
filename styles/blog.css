@@ -96,7 +96,7 @@
 .blog-row .num {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--ink-muted);
+  color: var(--ink-dim);
   letter-spacing: 0.1em;
 }
 .blog-row .date {

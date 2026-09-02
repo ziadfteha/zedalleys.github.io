@@ -149,7 +149,7 @@ img { max-width: 100%; display: block; }
 
 .nav-links {
   display: flex;
-  gap: 4px;
+  gap: 8px;
   font-family: var(--font-mono);
   font-size: 12px;
   letter-spacing: 0.06em;
@@ -157,7 +157,7 @@ img { max-width: 100%; display: block; }
 }
 .nav-link {
   position: relative;
-  padding: 8px 14px;
+  padding: 13px 16px;
   color: #fff;
   border-radius: 999px;
   transition: background 0.4s var(--ease-out);
@@ -181,7 +181,7 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   align-items: center;
   gap: 5px;
-  width: 36px; height: 36px;
+  width: 44px; height: 44px;
   flex-shrink: 0;
   z-index: 101;
 }
@@ -466,7 +466,7 @@ img { max-width: 100%; display: block; }
   font-size: 10px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--ink-muted);
+  color: var(--ink-dim);
   padding: 8px 16px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;

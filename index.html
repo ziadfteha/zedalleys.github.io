@@ -45,6 +45,8 @@
   </button>
 </nav>
 
+<main>
+
 <!-- HERO -->
 <header class="hero">
   <div class="hero-meta reveal">
@@ -145,45 +147,53 @@
   </div>
 
   <ul class="featured-list" id="featured">
-    <li class="featured-item" data-href="case-study-fabrihub.html">
-      <span class="featured-num">01</span>
-      <span class="featured-title">FabriHub</span>
-      <div class="featured-tags">
-        <span class="featured-tag">Marketplace</span>
-        <span class="featured-tag">Web</span>
-      </div>
-      <span class="featured-year">2023</span>
-      <span class="featured-arrow">→</span>
+    <li>
+      <a class="featured-item" href="case-study-fabrihub.html">
+        <span class="featured-num">01</span>
+        <span class="featured-title">FabriHub</span>
+        <div class="featured-tags">
+          <span class="featured-tag">Marketplace</span>
+          <span class="featured-tag">Web</span>
+        </div>
+        <span class="featured-year">2023</span>
+        <span class="featured-arrow">→</span>
+      </a>
     </li>
-    <li class="featured-item" data-href="case-study-luqman.html">
-      <span class="featured-num">02</span>
-      <span class="featured-title">Luqman — Dalael Centre</span>
-      <div class="featured-tags">
-        <span class="featured-tag">Education</span>
-        <span class="featured-tag">Web</span>
-      </div>
-      <span class="featured-year">2022</span>
-      <span class="featured-arrow">→</span>
+    <li>
+      <a class="featured-item" href="case-study-luqman.html">
+        <span class="featured-num">02</span>
+        <span class="featured-title">Luqman — Dalael Centre</span>
+        <div class="featured-tags">
+          <span class="featured-tag">Education</span>
+          <span class="featured-tag">Web</span>
+        </div>
+        <span class="featured-year">2022</span>
+        <span class="featured-arrow">→</span>
+      </a>
     </li>
-    <li class="featured-item" data-href="case-study-ilearn.html">
-      <span class="featured-num">03</span>
-      <span class="featured-title">i‑Learn</span>
-      <div class="featured-tags">
-        <span class="featured-tag">Education</span>
-        <span class="featured-tag">Web + App</span>
-      </div>
-      <span class="featured-year">2021</span>
-      <span class="featured-arrow">→</span>
+    <li>
+      <a class="featured-item" href="case-study-ilearn.html">
+        <span class="featured-num">03</span>
+        <span class="featured-title">i‑Learn</span>
+        <div class="featured-tags">
+          <span class="featured-tag">Education</span>
+          <span class="featured-tag">Web + App</span>
+        </div>
+        <span class="featured-year">2021</span>
+        <span class="featured-arrow">→</span>
+      </a>
     </li>
-    <li class="featured-item" data-href="case-study-reportage.html">
-      <span class="featured-num">04</span>
-      <span class="featured-title">Reportage Properties</span>
-      <div class="featured-tags">
-        <span class="featured-tag">Real estate</span>
-        <span class="featured-tag">iOS + Android</span>
-      </div>
-      <span class="featured-year">2021</span>
-      <span class="featured-arrow">→</span>
+    <li>
+      <a class="featured-item" href="case-study-reportage.html">
+        <span class="featured-num">04</span>
+        <span class="featured-title">Reportage Properties</span>
+        <div class="featured-tags">
+          <span class="featured-tag">Real estate</span>
+          <span class="featured-tag">iOS + Android</span>
+        </div>
+        <span class="featured-year">2021</span>
+        <span class="featured-arrow">→</span>
+      </a>
     </li>
   </ul>
 </section>
@@ -223,6 +233,8 @@
 </section>
 
 <!-- FOOTER -->
+</main>
+
 <footer class="footer">
   <div class="footer-big">
     Have a project? <a href="contact.html"><em>Let's talk →</em></a>
@@ -313,13 +325,6 @@
     function loop(t) { buildPath(t); requestAnimationFrame(loop); }
     requestAnimationFrame(loop);
   })();
-
-  // Featured list — row click navigates to the case study
-  document.querySelectorAll('.featured-item').forEach(item => {
-    item.addEventListener('click', () => {
-      window.location.href = item.dataset.href;
-    });
-  });
 </script>
 
 </body>

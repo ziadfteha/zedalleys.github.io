@@ -44,6 +44,8 @@
   </button>
 </nav>
 
+<main>
+
 <header class="portfolio-hero">
   <span class="eyebrow reveal">Selected Work · 2018 — 2026</span>
   <h1 class="display split-line"><em>Things</em> I've designed.</h1>
@@ -58,10 +60,10 @@
     <button class="filter-btn" data-filter="real-estate">Real estate</button>
   </div>
   <div class="view-toggle">
-    <button class="is-active" data-view="grid" title="Grid">
+    <button class="is-active" data-view="grid" aria-label="Grid view" title="Grid">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="1" width="5" height="5"/><rect x="8" y="1" width="5" height="5"/><rect x="1" y="8" width="5" height="5"/><rect x="8" y="8" width="5" height="5"/></svg>
     </button>
-    <button data-view="list" title="List">
+    <button data-view="list" aria-label="List view" title="List">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="1" y1="3" x2="13" y2="3"/><line x1="1" y1="7" x2="13" y2="7"/><line x1="1" y1="11" x2="13" y2="11"/></svg>
     </button>
   </div>
@@ -113,11 +115,13 @@
 
 <!-- LIST VIEW -->
 <section class="gallery-index" id="listView" style="display:none;">
-  <div class="row" data-href="case-study-luqman.html"><span class="num">01</span><span class="title">Luqman — Dalael Centre</span><span class="meta">Education · Web</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2022</span><span class="arrow">→</span></div>
-  <div class="row" data-href="case-study-fabrihub.html"><span class="num">02</span><span class="title">FabriHub</span><span class="meta">Marketplace · Web</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2023</span><span class="arrow">→</span></div>
-  <div class="row" data-href="case-study-ilearn.html"><span class="num">03</span><span class="title">i‑Learn</span><span class="meta">Education · Web + App</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2021</span><span class="arrow">→</span></div>
-  <div class="row" data-href="case-study-reportage.html"><span class="num">04</span><span class="title">Reportage Properties</span><span class="meta">Real estate · iOS + Android</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2021</span><span class="arrow">→</span></div>
+  <a class="row" href="case-study-luqman.html"><span class="num">01</span><span class="title">Luqman — Dalael Centre</span><span class="meta">Education · Web</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2022</span><span class="arrow">→</span></a>
+  <a class="row" href="case-study-fabrihub.html"><span class="num">02</span><span class="title">FabriHub</span><span class="meta">Marketplace · Web</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2023</span><span class="arrow">→</span></a>
+  <a class="row" href="case-study-ilearn.html"><span class="num">03</span><span class="title">i‑Learn</span><span class="meta">Education · Web + App</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2021</span><span class="arrow">→</span></a>
+  <a class="row" href="case-study-reportage.html"><span class="num">04</span><span class="title">Reportage Properties</span><span class="meta">Real estate · iOS + Android</span><span class="meta">Product & UX/UI Designer</span><span class="meta">2021</span><span class="arrow">→</span></a>
 </section>
+
+</main>
 
 <footer class="footer">
   <div class="footer-big">
@@ -154,10 +158,6 @@
       document.getElementById('gridView').style.display = v === 'grid' ? 'grid' : 'none';
       document.getElementById('listView').style.display = v === 'list' ? 'block' : 'none';
     });
-  });
-  // List click
-  document.querySelectorAll('.gallery-index .row').forEach(r => {
-    r.addEventListener('click', () => { window.location.href = r.dataset.href; });
   });
 </script>
 

@@ -80,18 +80,20 @@
 
     <!-- STEP 1 -->
     <div class="form-screen" data-screen="0">
-      <div class="form-step-label">Step 01 / 03 · About you</div>
+      <div class="form-step-label" tabindex="-1">Step 01 / 03 · About you</div>
 
       <div class="form-group">
-        <label class="form-label">Your name</label>
-        <input class="form-input" type="text" placeholder="Jane Doe" id="f-name">
+        <label class="form-label" for="f-name">Your name</label>
+        <input class="form-input" type="text" placeholder="Jane Doe" id="f-name" aria-describedby="f-name-error">
+        <span class="form-error" id="f-name-error" role="alert" hidden>Please enter your name.</span>
       </div>
       <div class="form-group">
-        <label class="form-label">Email address</label>
-        <input class="form-input" type="email" placeholder="jane@company.com" id="f-email">
+        <label class="form-label" for="f-email">Email address</label>
+        <input class="form-input" type="email" placeholder="jane@company.com" id="f-email" aria-describedby="f-email-error">
+        <span class="form-error" id="f-email-error" role="alert" hidden>Please enter your email.</span>
       </div>
       <div class="form-group">
-        <label class="form-label">Company / role <span style="color:var(--ink-muted);text-transform:none;letter-spacing:0;font-size:11px">(optional)</span></label>
+        <label class="form-label" for="f-company">Company / role <span style="color:var(--ink-dim);text-transform:none;letter-spacing:0;font-size:11px">(optional)</span></label>
         <input class="form-input" type="text" placeholder="Acme Inc · Head of Product" id="f-company">
       </div>
 
@@ -105,39 +107,39 @@
 
     <!-- STEP 2 -->
     <div class="form-screen" data-screen="1" style="display:none;">
-      <div class="form-step-label">Step 02 / 03 · The project</div>
+      <div class="form-step-label" tabindex="-1">Step 02 / 03 · The project</div>
 
-      <div class="form-group">
-        <label class="form-label">What kind of project?</label>
-        <div class="form-options" data-multi data-name="type">
-          <div class="form-option">Product Design</div>
-          <div class="form-option">Design System</div>
-          <div class="form-option">Mobile App</div>
-          <div class="form-option">Brand & Web</div>
-          <div class="form-option">UX Research</div>
-          <div class="form-option">Advisory · Coaching</div>
+      <fieldset class="form-group">
+        <legend class="form-label">What kind of project?</legend>
+        <div class="form-options" data-name="type">
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Product Design">Product Design</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Design System">Design System</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Mobile App">Mobile App</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Brand & Web">Brand & Web</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="UX Research">UX Research</label>
+          <label class="form-option"><input class="form-option-input" type="checkbox" name="type" value="Advisory · Coaching">Advisory · Coaching</label>
         </div>
-      </div>
+      </fieldset>
 
-      <div class="form-group">
-        <label class="form-label">Budget range</label>
+      <fieldset class="form-group">
+        <legend class="form-label">Budget range</legend>
         <div class="form-options" data-name="budget">
-          <div class="form-option">Under $10k</div>
-          <div class="form-option">$10k – $30k</div>
-          <div class="form-option">$30k – $80k</div>
-          <div class="form-option">$80k+</div>
+          <label class="form-option"><input class="form-option-input" type="radio" name="budget" value="Under $10k">Under $10k</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="budget" value="$10k – $30k">$10k – $30k</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="budget" value="$30k – $80k">$30k – $80k</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="budget" value="$80k+">$80k+</label>
         </div>
-      </div>
+      </fieldset>
 
-      <div class="form-group">
-        <label class="form-label">Timeline</label>
+      <fieldset class="form-group">
+        <legend class="form-label">Timeline</legend>
         <div class="form-options" data-name="timeline">
-          <div class="form-option">ASAP</div>
-          <div class="form-option">Within 1 month</div>
-          <div class="form-option">Within 3 months</div>
-          <div class="form-option">Just exploring</div>
+          <label class="form-option"><input class="form-option-input" type="radio" name="timeline" value="ASAP">ASAP</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="timeline" value="Within 1 month">Within 1 month</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="timeline" value="Within 3 months">Within 3 months</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="timeline" value="Just exploring">Just exploring</label>
         </div>
-      </div>
+      </fieldset>
 
       <div class="form-actions">
         <button class="btn magnetic" type="button" data-back>
@@ -151,22 +153,22 @@
 
     <!-- STEP 3 -->
     <div class="form-screen" data-screen="2" style="display:none;">
-      <div class="form-step-label">Step 03 / 03 · Tell me more</div>
+      <div class="form-step-label" tabindex="-1">Step 03 / 03 · Tell me more</div>
 
       <div class="form-group">
-        <label class="form-label">What are you working on?</label>
+        <label class="form-label" for="f-message">What are you working on?</label>
         <textarea class="form-textarea" placeholder="A few sentences about the problem you're trying to solve, who it's for, and what success looks like." id="f-message"></textarea>
       </div>
 
-      <div class="form-group">
-        <label class="form-label">How did you find me?</label>
+      <fieldset class="form-group">
+        <legend class="form-label">How did you find me?</legend>
         <div class="form-options" data-name="source">
-          <div class="form-option">Referral</div>
-          <div class="form-option">LinkedIn</div>
-          <div class="form-option">Read.cv / Dribbble</div>
-          <div class="form-option">Search · Other</div>
+          <label class="form-option"><input class="form-option-input" type="radio" name="source" value="Referral">Referral</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="source" value="LinkedIn">LinkedIn</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="source" value="Read.cv / Dribbble">Read.cv / Dribbble</label>
+          <label class="form-option"><input class="form-option-input" type="radio" name="source" value="Search · Other">Search · Other</label>
         </div>
-      </div>
+      </fieldset>
 
       <div class="form-actions">
         <button class="btn magnetic" type="button" data-back>
@@ -181,14 +183,14 @@
     <!-- SUCCESS -->
     <div class="contact-success" data-screen="success" style="display:none;">
       <svg viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="2"><circle cx="40" cy="40" r="38"/><path d="M24 40l12 12 22-22" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <h3 class="display"><em>Almost there.</em></h3>
+      <h2 class="display" tabindex="-1"><em>Almost there.</em></h2>
       <p>Your email app should have just opened with everything filled in — hit send there and I'll be back in your inbox within 24 hours.<br>In the meantime, here's a <a href="blog.html" style="color:var(--accent);text-decoration:underline">recent essay</a> on design systems.</p>
       <a href="index.html" class="btn"><span>Back home</span><span>→</span></a>
 
       <div class="contact-fallback">
         <p class="contact-fallback-hint">Nothing happened? Not having an email app configured on this device isn't unusual — copy the message below and send it from any inbox to <a href="mailto:ziadfteha@gmail.com">ziadfteha@gmail.com</a>.</p>
         <textarea class="form-textarea contact-fallback-text" id="fallback-message" readonly rows="7"></textarea>
-        <button class="btn magnetic" type="button" id="copyFallback"><span>Copy message</span></button>
+        <button class="btn magnetic" type="button" id="copyFallback"><span aria-live="polite">Copy message</span></button>
       </div>
     </div>
   </form>
@@ -216,49 +218,55 @@
       d.classList.toggle('is-done', i < n);
     });
     if (window.__bindMagnetic) window.__bindMagnetic();
+    const heading = screens[n].querySelector('.form-step-label');
+    if (heading) heading.focus();
+  }
+
+  // Inline validation for step 1 — shared by the "Continue" button and final submit,
+  // since a user can go back and clear these fields after passing step 1 once.
+  function setFieldError(id, message) {
+    const input = document.getElementById(id);
+    const errorEl = document.getElementById(id + '-error');
+    if (message) {
+      input.setAttribute('aria-invalid', 'true');
+      errorEl.textContent = message;
+      errorEl.hidden = false;
+    } else {
+      input.removeAttribute('aria-invalid');
+      errorEl.hidden = true;
+    }
+    return !message;
+  }
+
+  function validateAboutYou() {
+    const name = document.getElementById('f-name').value.trim();
+    const email = document.getElementById('f-email').value.trim();
+    const nameOk = setFieldError('f-name', name ? '' : 'Please enter your name.');
+    const emailOk = setFieldError('f-email', email ? '' : 'Please enter your email.');
+    if (!nameOk) document.getElementById('f-name').focus();
+    else if (!emailOk) document.getElementById('f-email').focus();
+    return nameOk && emailOk;
   }
 
   document.querySelectorAll('[data-next]').forEach(b => b.addEventListener('click', () => {
-    if (step === 0) {
-      const name = document.getElementById('f-name').value.trim();
-      const email = document.getElementById('f-email').value.trim();
-      if (!name || !email) {
-        alert('Please fill in your name and email before continuing.');
-        return;
-      }
-    }
+    if (step === 0 && !validateAboutYou()) return;
     go(step + 1);
   }));
   document.querySelectorAll('[data-back]').forEach(b => b.addEventListener('click', () => go(step - 1)));
 
-  // Multi/single selection
-  document.querySelectorAll('.form-options').forEach(group => {
-    const multi = group.hasAttribute('data-multi');
-    group.querySelectorAll('.form-option').forEach(opt => {
-      opt.addEventListener('click', () => {
-        if (multi) {
-          opt.classList.toggle('is-selected');
-        } else {
-          group.querySelectorAll('.form-option').forEach(o => o.classList.remove('is-selected'));
-          opt.classList.add('is-selected');
-        }
-      });
-    });
-  });
-
   function selectedOptions(name) {
-    return Array.from(document.querySelectorAll(`.form-options[data-name="${name}"] .is-selected`))
-      .map(o => o.textContent.trim());
+    return Array.from(document.querySelectorAll(`.form-options[data-name="${name}"] .form-option-input:checked`))
+      .map(o => o.value);
   }
 
   // Submit — build a pre-filled mailto: so the message actually reaches an inbox
   document.querySelector('[data-submit]').addEventListener('click', () => {
+    // Step 0's fields are hidden while on a later step, so surface them first —
+    // validateAboutYou() then focuses the specific invalid field, if any.
+    go(0);
+    if (!validateAboutYou()) return;
     const name = document.getElementById('f-name').value.trim();
     const email = document.getElementById('f-email').value.trim();
-    if (!name || !email) {
-      alert('Please go back and fill in your name and email.');
-      return;
-    }
     const company = document.getElementById('f-company').value.trim();
     const message = document.getElementById('f-message').value.trim();
     const type = selectedOptions('type').join(', ') || '—';
@@ -291,7 +299,9 @@
     }
 
     document.querySelectorAll('.form-screen').forEach(s => s.style.display = 'none');
-    document.querySelector('[data-screen="success"]').style.display = 'block';
+    const successScreen = document.querySelector('[data-screen="success"]');
+    successScreen.style.display = 'block';
+    successScreen.querySelector('h2').focus();
     dots.forEach(d => { d.classList.add('is-done'); d.classList.remove('is-active'); });
   });
 

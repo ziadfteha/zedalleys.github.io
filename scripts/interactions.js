@@ -111,25 +111,49 @@
 
   // Mobile nav toggle — opens/closes the slide-in nav-links panel
   const navToggle = document.getElementById('navToggle');
-  if (nav && navToggle) {
-    const closeMenu = () => {
+  const navLinksPanel = document.getElementById('navLinks');
+  if (nav && navToggle && navLinksPanel) {
+    const closeMenu = ({ returnFocus } = {}) => {
+      const wasOpen = nav.classList.contains('is-menu-open');
       nav.classList.remove('is-menu-open');
       navToggle.setAttribute('aria-expanded', 'false');
       document.body.style.overflow = '';
+      if (wasOpen && returnFocus) navToggle.focus();
     };
     navToggle.addEventListener('click', () => {
       const isOpen = nav.classList.toggle('is-menu-open');
       navToggle.setAttribute('aria-expanded', String(isOpen));
       document.body.style.overflow = isOpen ? 'hidden' : '';
+      if (isOpen) {
+        const firstLink = navLinksPanel.querySelector('.nav-link');
+        if (firstLink) firstLink.focus();
+      } else {
+        navToggle.focus();
+      }
     });
-    const navLinksPanel = document.getElementById('navLinks');
     document.querySelectorAll('.nav-link').forEach(link => link.addEventListener('click', () => {
       // Close instantly (no slide-out) — the page is about to navigate away,
       // so an animated close just flashes the tapped label before the transition overlay catches up.
-      if (navLinksPanel) navLinksPanel.style.transition = 'none';
+      navLinksPanel.style.transition = 'none';
       closeMenu();
     }));
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+    document.addEventListener('keydown', (e) => {
+      if (!nav.classList.contains('is-menu-open')) return;
+      if (e.key === 'Escape') { closeMenu({ returnFocus: true }); return; }
+      if (e.key !== 'Tab') return;
+      // Trap Tab/Shift+Tab within the toggle + the open panel's links so a
+      // keyboard user can't tab into page content hidden behind the overlay.
+      const focusable = [navToggle, ...navLinksPanel.querySelectorAll('a[href]')];
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
   }
 
   window.__bindMagnetic = bindMagnetic;

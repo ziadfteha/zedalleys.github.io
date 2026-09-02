@@ -21,9 +21,9 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.filter-group { display: flex; gap: 4px; flex-wrap: wrap; }
+.filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
 .filter-btn {
-  padding: 8px 14px;
+  padding: 13px 16px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
   color: var(--ink-dim);
@@ -33,9 +33,9 @@
 .filter-btn:hover { color: var(--ink); border-color: var(--ink); }
 .filter-btn.is-active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
 
-.view-toggle { display: flex; gap: 4px; }
+.view-toggle { display: flex; gap: 8px; }
 .view-toggle button {
-  width: 36px; height: 36px;
+  width: 44px; height: 44px;
   border: 1px solid var(--line-strong);
   border-radius: 999px;
   display: flex;
@@ -129,7 +129,7 @@
 .gallery-index .row .num {
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--ink-muted);
+  color: var(--ink-dim);
   letter-spacing: 0.1em;
 }
 .gallery-index .row .title {

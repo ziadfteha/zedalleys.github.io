@@ -21,7 +21,7 @@
   font-size: 12px;
 }
 .about-hero .meta-item .label {
-  color: var(--ink-muted);
+  color: var(--ink-dim);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-size: 10px;
@@ -144,7 +144,7 @@
 .edu-list { list-style: none; }
 .edu-list li { padding: 16px 0; border-bottom: 1px solid var(--line); }
 .edu-title { color: var(--ink); font-size: 15px; margin-bottom: 4px; }
-.edu-meta { font-family: var(--font-mono); font-size: 11px; color: var(--ink-muted); }
+.edu-meta { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); }
 
 /* ============ SKILLS ============ */
 

@@ -1,0 +1,4 @@
+# Learning Hub sub-app has its own build tooling and lockfile
+_hub/
+# Built/minified output — not hand-authored
+learning-hub/

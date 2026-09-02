@@ -1,0 +1,14 @@
+{
+  "name": "zedalleys-website",
+  "private": true,
+  "description": "Zed Alleys — personal portfolio site (static HTML/CSS/JS, deployed via GitHub Pages)",
+  "scripts": {
+    "lint": "eslint scripts/*.js",
+    "format": "prettier --write \"**/*.{css,js}\"",
+    "format:check": "prettier --check \"**/*.{css,js}\""
+  },
+  "devDependencies": {
+    "eslint": "^9.15.0",
+    "prettier": "^3.3.3"
+  }
+}

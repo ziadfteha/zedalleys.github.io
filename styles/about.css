@@ -28,7 +28,9 @@
   margin-bottom: 8px;
   display: block;
 }
-.about-hero .meta-item .value { color: var(--ink); }
+.about-hero .meta-item .value {
+  color: var(--ink);
+}
 
 /* ============ INTRO ============ */
 
@@ -41,7 +43,10 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-.about-intro .photo { height: 520px; border-radius: 4px; }
+.about-intro .photo {
+  height: 520px;
+  border-radius: 4px;
+}
 .about-intro-content p {
   color: var(--ink-dim);
   font-size: 17px;
@@ -85,7 +90,9 @@
 
 /* ============ TIMELINE ============ */
 
-.timeline { border-top: 1px solid var(--line); }
+.timeline {
+  border-top: 1px solid var(--line);
+}
 .timeline-row {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -141,10 +148,23 @@
   margin-bottom: 24px;
   font-weight: 400;
 }
-.edu-list { list-style: none; }
-.edu-list li { padding: 16px 0; border-bottom: 1px solid var(--line); }
-.edu-title { color: var(--ink); font-size: 15px; margin-bottom: 4px; }
-.edu-meta { font-family: var(--font-mono); font-size: 11px; color: var(--ink-dim); }
+.edu-list {
+  list-style: none;
+}
+.edu-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+.edu-title {
+  color: var(--ink);
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.edu-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-dim);
+}
 
 /* ============ SKILLS ============ */
 
@@ -162,17 +182,39 @@
   border: 1px solid var(--line-strong);
   border-radius: 999px;
   color: var(--ink-dim);
-  transition: color 0.3s, border-color 0.3s;
+  transition:
+    color 0.3s,
+    border-color 0.3s;
 }
-.tag:hover { color: var(--accent); border-color: var(--accent); }
+.tag:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .about-intro { grid-template-columns: 1fr; }
-  .about-intro .photo { height: 320px; }
-  .about-hero .meta-row { grid-template-columns: 1fr 1fr; }
-  .section-header { grid-template-columns: 1fr; gap: 24px; }
-  .timeline-row { grid-template-columns: 1fr; gap: 8px; }
-  .timeline-years { padding-top: 0; }
-  .edu-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+  .about-intro .photo {
+    height: 320px;
+  }
+  .about-hero .meta-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .timeline-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .timeline-years {
+    padding-top: 0;
+  }
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }

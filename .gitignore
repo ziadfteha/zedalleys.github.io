@@ -1,4 +1,5 @@
 .claude/
+node_modules/
 
 # Learning Hub sub-app (_hub/) — build tooling, not deployed
 _hub/node_modules/

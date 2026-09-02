@@ -45,8 +45,15 @@
   animation: blobPulse 8s var(--ease-in-out) infinite;
 }
 @keyframes blobPulse {
-  0%, 100% { transform: scale(1); opacity: 0.32; }
-  50% { transform: scale(1.18); opacity: 0.45; }
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.32;
+  }
+  50% {
+    transform: scale(1.18);
+    opacity: 0.45;
+  }
 }
 .hero-figure .orbit-dot {
   fill: var(--accent);
@@ -74,27 +81,49 @@
 .hero-headline,
 .hero-meta,
 .hero-bottom,
-.scroll-hint { position: relative; z-index: 1; }
+.scroll-hint {
+  position: relative;
+  z-index: 1;
+}
 
-.spin-slow { animation: spin 60s linear infinite; transform-origin: center; }
-.spin-rev  { animation: spin 90s linear infinite reverse; transform-origin: center; }
-.spin-fast { animation: spin 24s linear infinite; transform-origin: center; }
-@keyframes spin { to { transform: rotate(360deg); } }
+.spin-slow {
+  animation: spin 60s linear infinite;
+  transform-origin: center;
+}
+.spin-rev {
+  animation: spin 90s linear infinite reverse;
+  transform-origin: center;
+}
+.spin-fast {
+  animation: spin 24s linear infinite;
+  transform-origin: center;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 @media (max-width: 900px) {
   .hero-figure {
     position: relative;
-    top: auto; right: auto;
+    top: auto;
+    right: auto;
     transform: none;
     margin: 40px auto;
-    width: 260px; height: 260px;
+    width: 260px;
+    height: 260px;
   }
   /* On mobile the stacked hero content grows taller than 100vh, so
      .scroll-hint's `position: absolute; bottom: 40px` (pinned to the
      .hero box's own bottom edge, not the viewport) lands on top of the
      CTA buttons instead of below the fold — hide the decorative hint. */
-  .scroll-hint { display: none; }
-  .hero-cta { flex-wrap: wrap; }
+  .scroll-hint {
+    display: none;
+  }
+  .hero-cta {
+    flex-wrap: wrap;
+  }
 }
 
 .hero-meta {
@@ -108,8 +137,14 @@
   color: var(--ink-dim);
   margin-bottom: 60px;
 }
-.hero-meta-item .label { color: var(--ink-dim); margin-bottom: 6px; display: block; }
-.hero-meta-item .value { color: var(--ink); }
+.hero-meta-item .label {
+  color: var(--ink-dim);
+  margin-bottom: 6px;
+  display: block;
+}
+.hero-meta-item .value {
+  color: var(--ink);
+}
 .status-pill {
   display: inline-flex;
   align-items: center;
@@ -119,7 +154,8 @@
   border-radius: 999px;
 }
 .status-pill .dot {
-  width: 6px; height: 6px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--success);
   box-shadow: 0 0 8px var(--success);
@@ -139,7 +175,9 @@
   font-weight: 200;
   color: var(--accent);
 }
-.hero-headline .indent { padding-left: 0.5em; }
+.hero-headline .indent {
+  padding-left: 0.5em;
+}
 
 .hero-bottom {
   display: grid;
@@ -147,7 +185,9 @@
   gap: 60px;
   align-items: end;
 }
-.hero-bio { max-width: 480px; }
+.hero-bio {
+  max-width: 480px;
+}
 .hero-cta {
   display: flex;
   gap: 16px;
@@ -182,7 +222,9 @@
   letter-spacing: -0.03em;
 }
 
-.featured-list { list-style: none; }
+.featured-list {
+  list-style: none;
+}
 .featured-item {
   position: relative;
   border-bottom: 1px solid var(--line);
@@ -194,8 +236,13 @@
   cursor: pointer;
   transition: padding 0.5s var(--ease-out);
 }
-.featured-item:first-child { border-top: 1px solid var(--line); }
-.featured-item:hover { padding-left: 24px; padding-right: 24px; }
+.featured-item:first-child {
+  border-top: 1px solid var(--line);
+}
+.featured-item:hover {
+  padding-left: 24px;
+  padding-right: 24px;
+}
 
 .featured-num {
   font-family: var(--font-mono);
@@ -212,7 +259,9 @@
   line-height: 1;
   transition: color 0.4s var(--ease-out);
 }
-.featured-item:hover .featured-title { color: var(--accent); }
+.featured-item:hover .featured-title {
+  color: var(--accent);
+}
 .featured-tags {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -223,7 +272,11 @@
   flex-wrap: wrap;
   gap: 8px;
 }
-.featured-tag { padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; }
+.featured-tag {
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
 
 .featured-year {
   font-family: var(--font-mono);
@@ -234,7 +287,8 @@
 }
 
 .featured-arrow {
-  width: 40px; height: 40px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid var(--line-strong);
   display: flex;
@@ -275,7 +329,12 @@
   line-height: 1;
   margin-bottom: 32px;
 }
-.about-teaser p { color: var(--ink-dim); margin-bottom: 24px; font-size: 17px; line-height: 1.6; }
+.about-teaser p {
+  color: var(--ink-dim);
+  margin-bottom: 24px;
+  font-size: 17px;
+  line-height: 1.6;
+}
 
 /* ============ STATS ============ */
 
@@ -296,7 +355,9 @@
   line-height: 1;
   margin-bottom: 16px;
 }
-.stat-num .accent { color: var(--accent); }
+.stat-num .accent {
+  color: var(--accent);
+}
 .stat-label {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -306,12 +367,30 @@
 }
 
 @media (max-width: 900px) {
-  .hero-meta { grid-template-columns: 1fr 1fr; }
-  .hero-bottom { grid-template-columns: 1fr; }
-  .hero-cta { justify-content: flex-start; }
-  .section-header { grid-template-columns: 1fr; gap: 24px; }
-  .featured-item { grid-template-columns: 30px 1fr 30px; }
-  .featured-tags, .featured-year { display: none; }
-  .about-teaser { grid-template-columns: 1fr; }
-  .stats { grid-template-columns: 1fr 1fr; }
+  .hero-meta {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-bottom {
+    grid-template-columns: 1fr;
+  }
+  .hero-cta {
+    justify-content: flex-start;
+  }
+  .section-header {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .featured-item {
+    grid-template-columns: 30px 1fr 30px;
+  }
+  .featured-tags,
+  .featured-year {
+    display: none;
+  }
+  .about-teaser {
+    grid-template-columns: 1fr;
+  }
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
 }
